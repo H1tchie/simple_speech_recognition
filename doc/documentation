@@ -1,0 +1,11 @@
+## ADC
+- https://forum.digikey.com/t/adc-ad7991-pmod-controller-vhdl/12895
+- nhttps://digilent.com/reference/_media/reference/pmod/pmodad2/pmodad2_sch.pdf?_gl=1*1sp6jjm*_gcl_au*MTkzMTA1NjA0MC4xNzIxMzEwMTcy*_ga*NzU4NTEwODIuMTcyMTMxMDE3Mg..*_ga_JSPEFFCPBT*MTcyMTMxMDE3Mi4xLjEuMTcyMTMxMDE4NS40Ny4wLjA.
+- https://www.analog.com/media/en/technical-documentation/data-sheets/ad7991_7995_7999.pdf
+## Amplifier
+- https://www.mpja.com/Pack-of-10-LM358P-Dual-Operational-Amplifier/productinfo/36231%20IC/
+- https://home.agh.edu.pl/~maziarz/LabPE/wzmacniacz.html
+## Zapożyczone moduły
+- https://github.com/lxschwalb/fpga_mel_filter_bank
+- https://github.com/nanamake/r22sdf
+
