@@ -1,5 +1,5 @@
 # compile verilog/system verilog design source files
-sv xil_defaultlib  \
+sv xil_defaultlib  -i "../../../../../data" -i "../../../../../rtl/dsp" -i "../../../../../rtl/neural_network" \
 "../../../../../../rtl/axi/axi4lite_regs.sv" \
 "../../../../../../rtl/ssr_pkg.sv" \
 "../../../../../../rtl/data_source/bram_stream_source.sv" \

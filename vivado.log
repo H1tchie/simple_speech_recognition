@@ -283,3 +283,131 @@ launch_runs synth_1 -jobs 4
 WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
 [Tue Jun  9 20:44:26 2026] Launched synth_1...
 Run output will be captured here: /home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Tue Jun  9 20:56:43 2026] Launched synth_1...
+Run output will be captured here: /home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Tue Jun  9 21:04:13 2026] Launched impl_1...
+Run output will be captured here: /home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.runs/impl_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'top_ssr_basys3'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home_local/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_ssr_basys3' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.sim/sim_1/behav/xsim/samples.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj top_ssr_basys3_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/axi/axi4lite_regs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi4lite_regs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/ssr_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram_stream_source
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network/nn_parameters.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network/dense_layer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dense_layer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/feature_aggregator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module feature_aggregator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/fft_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network/final_layer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module final_layer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/framing.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module framing
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/led_logic/led_logic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led_logic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/mel_filter_bank.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mel_filter_bank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/mfcc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mfcc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/preemphasis.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module preemphasis
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network/top_nn.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_nn
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network/top_nn_axis.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_nn_axis
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/top_ssr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_ssr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/window.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module window
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/rtl/top_ssr_basys3.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_ssr_basys3
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot top_ssr_basys3_behav xil_defaultlib.top_ssr_basys3 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /home_local/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot top_ssr_basys3_behav xil_defaultlib.top_ssr_basys3 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/rtl/top_ssr_basys3.sv" Line 15. Module top_ssr_basys3 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/rtl/top_ssr_basys3.sv" Line 15. Module top_ssr_basys3 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.ssr_pkg
+Compiling package xil_defaultlib.nn_parameters
+Compiling module xil_defaultlib.axi4lite_regs
+Compiling module xil_defaultlib.bram_stream_source_default
+Compiling module xil_defaultlib.preemphasis
+Compiling module xil_defaultlib.framing_default
+Compiling module xil_defaultlib.window_default
+Compiling module xil_defaultlib.fft_wrapper_default
+Compiling module xil_defaultlib.mel_filter_bank_default
+Compiling module xil_defaultlib.mfcc_default
+Compiling module xil_defaultlib.feature_aggregator_default
+Compiling module xil_defaultlib.dense_layer_default
+Compiling module xil_defaultlib.dense_layer(IN_SIZE=32,OUT_SIZE=...
+Compiling module xil_defaultlib.final_layer
+Compiling module xil_defaultlib.top_nn
+Compiling module xil_defaultlib.top_nn_axis_default
+Compiling module xil_defaultlib.led_logic
+Compiling module xil_defaultlib.top_ssr
+Compiling module xil_defaultlib.top_ssr_basys3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_ssr_basys3_behav
+run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 7966.242 ; gain = 0.000 ; free physical = 4610 ; free virtual = 14802
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "top_ssr_basys3_behav -key {Behavioral:sim_1:Functional:top_ssr_basys3} -tclbatch {top_ssr_basys3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source top_ssr_basys3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: File window_hamming_512.mem referenced on /home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/window.sv at line 41 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File twiddle_cos_512.mem referenced on /home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/fft_wrapper.sv at line 57 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File twiddle_sin_512.mem referenced on /home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/fft_wrapper.sv at line 58 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File mel_bank_dense.mem referenced on /home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/mel_filter_bank.sv at line 48 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File dct_coeffs.mem referenced on /home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/mfcc.sv at line 81 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File dense1_weights.mem referenced on /home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network/dense_layer.sv at line 53 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File dense1_bias.mem referenced on /home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network/dense_layer.sv at line 54 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File dense2_weights.mem referenced on /home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network/dense_layer.sv at line 53 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File dense2_bias.mem referenced on /home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network/dense_layer.sv at line 54 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_ssr_basys3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 8019.266 ; gain = 53.023 ; free physical = 4580 ; free virtual = 14779

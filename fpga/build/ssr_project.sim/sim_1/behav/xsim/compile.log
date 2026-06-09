@@ -32,5 +32,3 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/
 INFO: [VRFC 10-311] analyzing module window
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/rtl/top_ssr_basys3.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module top_ssr_basys3
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

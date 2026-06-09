@@ -33,3 +33,10 @@ add_files -norecurse /home/student/mgibas/Desktop/sdup/simple_speech_recognition
 reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_simulation
+source top_ssr_basys3.tcl
