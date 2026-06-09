@@ -158,7 +158,25 @@ Weryfikacja przeciw referencji:
 python tools/verify.py sim/build/preemphasis_out.txt data/results/on/pre_emphasis.csv --fmt q15
 ```
 
-### 5. Bitstream
+### 5. Projekt Vivado / Bitstream
+
+**Otwarcie projektu w Vivado (GUI).** Skrypt tworzy gotowy, klikalny projekt
+(`fpga/build/ssr_project.xpr`) ze wszystkimi źródłami, ROM-ami `.mem` i pinami
+Basys3 — bez uruchamiania syntezy:
+
+```bash
+# z katalogu glownego repo:
+vivado -mode batch -source fpga/scripts/create_project.tcl
+#   -> potem w Vivado: File > Open Project > fpga/build/ssr_project.xpr
+
+# albo od razu otworz GUI z zaladowanym projektem:
+vivado -mode gui   -source fpga/scripts/create_project.tcl
+```
+
+Projekt dostaje też testbench systemowy w zestawie symulacyjnym (`sim_1`,
+top = `top_ssr_tb`), więc symulację odpalisz wprost z GUI (Run Simulation).
+
+**Bitstream (wsadowo):**
 
 ```bash
 generate_bitstream     # → fpga/build/.../ssr_project.bit
@@ -234,9 +252,9 @@ Skrypt: policzy 26 cech z każdego nagrania (tą samą logiką co `gen_reference
 
 Przydatne flagi: `--epochs 600` (dłuższy trening), `--seed 1` (inna inicjalizacja), `--emit-sv` (dodatkowo zapisze bloki `assign` jako kopię).
 
-**Skala cech.** Trening używa skali **Q5.10 (×1024)** — dokładnie tej, w której `feature_aggregator` wystawia mean+std MFCC. Wytrenowane wagi konsumują więc wprost wyjście potoku, **bez żadnych zmian w RTL**.
+**Skala cech.** Cechy do treningu są liczone **stałoprzecinkowo, bit-w-bit jak RTL** (`tools/train/dsp_fixed.py`), więc są to gotowe wartości int16 w skali **Q5.10** — dokładnie te, które wystawia `feature_aggregator`. Skala wejścia sieci = **1**; wytrenowane wagi konsumują wprost wyjście potoku, **bez żadnych zmian w RTL**.
 
-> Uwaga: cechy do treningu liczone są na „idealnym" (float) potoku. Potok RTL jest jego stałoprzecinkowym przybliżeniem (log2 LZC, FFT Q1.15, DCT całkowitoliczbowy), więc po syntezie warto sprawdzić wynik na kilku realnych nagraniach; w razie potrzeby dograj więcej danych i przeucz ponownie.
+> Trening = symulacja = sprzęt (ten sam stałoprzecinkowy DFT, te same ROM-y, ten sam `log2`/DCT/agregacja). Zweryfikowane: cały tor `próbki → 26 cech` zgadza się co do bitu między RTL a Pythonem. Mimo to po syntezie warto sprawdzić wynik na kilku realnych nagraniach i w razie potrzeby dograć więcej danych.
 
 ## Zasoby FPGA (szacunkowo)
 

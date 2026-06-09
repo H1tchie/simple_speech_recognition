@@ -5,7 +5,7 @@
  Version:       1.0
  Last modified: 2026-01
  Description:   Standardowy AXI4-Lite slave z 4 rejestrami 32-bit do
-                sterowania IPcorem z poziomu softcore'a (MicroBlaze 
+                sterowania IPcorem z poziomu softcore'a (MicroBlaze /
                 PicoRV32) - konspekt sekcja 3.1.
 
                 Mapa rejestrow:
