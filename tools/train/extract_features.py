@@ -53,7 +53,8 @@ def build_dataset(data_dir: Path):
         if not cdir.is_dir():
             missing.append(cls)
             continue
-        wavs = sorted(cdir.glob("*.wav"))
+        # rekurencyjnie: lapie tez .wav w podfolderach (np. other/up/, other/yes/)
+        wavs = sorted(cdir.rglob("*.wav"))
         print(f"  [{cls:5s}] {len(wavs)} plikow")
         for w in wavs:
             try:
