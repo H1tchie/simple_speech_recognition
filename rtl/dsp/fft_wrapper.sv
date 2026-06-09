@@ -58,14 +58,15 @@ module fft_wrapper #(
         $readmemh("twiddle_sin_512.mem", sin_rom);
     end
 
-    // isqrt(x) - calkowity pierwiastek (floor), bit po bicie
+    // isqrt(x) - calkowity pierwiastek (floor), bit po bicie.
+    // Stala liczba iteracji (40 = 80/2) - w pelni syntezowalne (rozwijalne).
     function automatic logic [39:0] isqrt80(input logic [79:0] x);
         logic [79:0] rem, root, bit_v;
+        integer i;
         begin
             rem = x; root = 0;
-            bit_v = 80'h4000_0000_0000_0000_0000;   // 2^78
-            while (bit_v > x) bit_v = bit_v >> 2;
-            while (bit_v != 0) begin
+            bit_v = 80'h4000_0000_0000_0000_0000;   // 2^78 (najwyzszy parzysty bit)
+            for (i = 0; i < 40; i = i + 1) begin
                 if (rem >= root + bit_v) begin
                     rem  = rem - (root + bit_v);
                     root = (root >> 1) + bit_v;

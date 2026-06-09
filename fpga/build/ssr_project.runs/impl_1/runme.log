@@ -1,0 +1,216 @@
+
+*** Running vivado
+    with args -log top_ssr_basys3.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_ssr_basys3.tcl -notrace
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source top_ssr_basys3.tcl -notrace
+Command: link_design -top top_ssr_basys3 -part xc7a35tcpg236-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2717.805 ; gain = 0.000 ; free physical = 4341 ; free virtual = 14348
+INFO: [Netlist 29-17] Analyzing 4493 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2717.805 ; gain = 0.000 ; free physical = 4241 ; free virtual = 14248
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 238 instances were transformed.
+  RAM64M => RAM64M (RAMD64E(x4)): 205 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 33 instances
+
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2717.805 ; gain = 0.109 ; free physical = 4241 ; free virtual = 14248
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2781.723 ; gain = 63.918 ; free physical = 4227 ; free virtual = 14234
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 154727ecf
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2852.535 ; gain = 70.812 ; free physical = 3785 ; free virtual = 13817
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1131 into driver instance u_top_ssr/u_agg/p_0_out_i_1005, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1132 into driver instance u_top_ssr/u_agg/p_0_out_i_1006, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1133 into driver instance u_top_ssr/u_agg/p_0_out_i_1007, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1134 into driver instance u_top_ssr/u_agg/p_0_out_i_1008, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1253 into driver instance u_top_ssr/u_agg/p_0_out_i_1147, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1254 into driver instance u_top_ssr/u_agg/p_0_out_i_1148, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1255 into driver instance u_top_ssr/u_agg/p_0_out_i_1149, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1256 into driver instance u_top_ssr/u_agg/p_0_out_i_1150, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1341 into driver instance u_top_ssr/u_agg/p_0_out_i_1269, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1342 into driver instance u_top_ssr/u_agg/p_0_out_i_1270, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1343 into driver instance u_top_ssr/u_agg/p_0_out_i_1271, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1344 into driver instance u_top_ssr/u_agg/p_0_out_i_1272, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1376 into driver instance u_top_ssr/u_agg/p_0_out_i_1357, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1377 into driver instance u_top_ssr/u_agg/p_0_out_i_1358, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1378 into driver instance u_top_ssr/u_agg/p_0_out_i_1359, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1379 into driver instance u_top_ssr/u_agg/p_0_out_i_1360, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1392 into driver instance u_top_ssr/u_agg/p_0_out_i_1362, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1393 into driver instance u_top_ssr/u_agg/p_0_out_i_1363, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1394 into driver instance u_top_ssr/u_agg/p_0_out_i_1364, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1395 into driver instance u_top_ssr/u_agg/p_0_out_i_1365, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1408 into driver instance u_top_ssr/u_agg/p_0_out_i_1367, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1409 into driver instance u_top_ssr/u_agg/p_0_out_i_1368, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1410 into driver instance u_top_ssr/u_agg/p_0_out_i_1369, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1411 into driver instance u_top_ssr/u_agg/p_0_out_i_1370, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1425 into driver instance u_top_ssr/u_agg/p_0_out_i_1372, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1426 into driver instance u_top_ssr/u_agg/p_0_out_i_1373, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1427 into driver instance u_top_ssr/u_agg/p_0_out_i_1374, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_1428 into driver instance u_top_ssr/u_agg/p_0_out_i_1375, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_996 into driver instance u_top_ssr/u_agg/p_0_out_i_33, which resulted in an inversion of 145 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_997 into driver instance u_top_ssr/u_agg/p_0_out_i_852, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/p_0_out_i_998 into driver instance u_top_ssr/u_agg/p_0_out_i_853, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/std_arr[0][1]_i_239 into driver instance u_top_ssr/u_agg/std_arr[0][2]_i_184, which resulted in an inversion of 7 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/std_arr[0][1]_i_43 into driver instance u_top_ssr/u_agg/std_arr[0][2]_i_21, which resulted in an inversion of 8 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/std_arr[0][3]_i_171 into driver instance u_top_ssr/u_agg/std_arr[0][4]_i_154, which resulted in an inversion of 8 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/std_arr[0][3]_i_44 into driver instance u_top_ssr/u_agg/std_arr[0][4]_i_22, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/std_arr[0][5]_i_241 into driver instance u_top_ssr/u_agg/std_arr[0][6]_i_168, which resulted in an inversion of 8 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_agg/std_arr[0][7]_i_44 into driver instance u_top_ssr/u_agg/std_arr[0][8]_i_21, which resulted in an inversion of 10 pins
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_fr/rd_base[9]_i_1 into driver instance u_top_ssr/u_fr/samples_in_buf[9]_i_3, which resulted in an inversion of 13 pins
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: db41051f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3154.578 ; gain = 57.031 ; free physical = 3514 ; free virtual = 13546
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 38 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 85dbd33a
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3154.578 ; gain = 57.031 ; free physical = 3468 ; free virtual = 13500
+INFO: [Opt 31-389] Phase Constant propagation created 327 cells and removed 369 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 131363b54
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3154.578 ; gain = 57.031 ; free physical = 3461 ; free virtual = 13494
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 131363b54
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3154.578 ; gain = 57.031 ; free physical = 3463 ; free virtual = 13495
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 131363b54
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3154.578 ; gain = 57.031 ; free physical = 3463 ; free virtual = 13495
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+INFO: [Opt 31-1287] Pulled Inverter u_top_ssr/u_fft/mag_buf_reg_0_63_0_2_i_2285 into driver instance u_top_ssr/u_fft/mag_buf_reg_0_63_0_2_i_1837, which resulted in an inversion of 9 pins
+Phase 6 Post Processing Netlist | Checksum: b9533a2a
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3154.578 ; gain = 57.031 ; free physical = 3462 ; free virtual = 13495
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 1 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |              38  |                                              0  |
+|  Constant propagation         |             327  |             369  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               1  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3154.578 ; gain = 0.000 ; free physical = 3585 ; free virtual = 13619
+Ending Logic Optimization Task | Checksum: 1755008e4
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3154.578 ; gain = 57.031 ; free physical = 3585 ; free virtual = 13619
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 9 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 18
+Ending PowerOpt Patch Enables Task | Checksum: 1755008e4
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3474.527 ; gain = 0.000 ; free physical = 3529 ; free virtual = 13573
+Ending Power Optimization Task | Checksum: 1755008e4
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 3474.527 ; gain = 319.949 ; free physical = 3554 ; free virtual = 13599
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1755008e4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3474.527 ; gain = 0.000 ; free physical = 3554 ; free virtual = 13599
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3474.527 ; gain = 0.000 ; free physical = 3554 ; free virtual = 13599
+Ending Netlist Obfuscation Task | Checksum: 1755008e4
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3474.527 ; gain = 0.000 ; free physical = 3554 ; free virtual = 13599
+INFO: [Common 17-83] Releasing license: Implementation
+67 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:21 . Memory (MB): peak = 3474.527 ; gain = 756.723 ; free physical = 3554 ; free virtual = 13599
+INFO: [Common 17-1381] The checkpoint '/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.runs/impl_1/top_ssr_basys3_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_ssr_basys3_drc_opted.rpt -pb top_ssr_basys3_drc_opted.pb -rpx top_ssr_basys3_drc_opted.rpx
+Command: report_drc -file top_ssr_basys3_drc_opted.rpt -pb top_ssr_basys3_drc_opted.pb -rpx top_ssr_basys3_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home_local/Xilinx/Vivado/2021.2/data/ip'.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.runs/impl_1/top_ssr_basys3_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC UTLZ-1] Resource utilization: Slice LUTs over-utilized in Top Level Design (This design requires more Slice LUTs cells than are available in the target device. This design requires 20960 of such cell types but only 20800 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
+INFO: [Vivado_Tcl 4-198] DRC finished with 1 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
+INFO: [Common 17-83] Releasing license: Implementation
+83 Infos, 1 Warnings, 0 Critical Warnings and 2 Errors encountered.
+place_design failed
+ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  9 21:05:05 2026...

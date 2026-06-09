@@ -1,0 +1,35 @@
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /home_local/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot top_ssr_basys3_behav xil_defaultlib.top_ssr_basys3 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/rtl/top_ssr_basys3.sv" Line 15. Module top_ssr_basys3 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/rtl/top_ssr_basys3.sv" Line 15. Module top_ssr_basys3 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.ssr_pkg
+Compiling package xil_defaultlib.nn_parameters
+Compiling module xil_defaultlib.axi4lite_regs
+Compiling module xil_defaultlib.bram_stream_source_default
+Compiling module xil_defaultlib.preemphasis
+Compiling module xil_defaultlib.framing_default
+Compiling module xil_defaultlib.window_default
+Compiling module xil_defaultlib.fft_wrapper_default
+Compiling module xil_defaultlib.mel_filter_bank_default
+Compiling module xil_defaultlib.mfcc_default
+Compiling module xil_defaultlib.feature_aggregator_default
+Compiling module xil_defaultlib.dense_layer_default
+Compiling module xil_defaultlib.dense_layer(IN_SIZE=32,OUT_SIZE=...
+Compiling module xil_defaultlib.final_layer
+Compiling module xil_defaultlib.top_nn
+Compiling module xil_defaultlib.top_nn_axis_default
+Compiling module xil_defaultlib.led_logic
+Compiling module xil_defaultlib.top_ssr
+Compiling module xil_defaultlib.top_ssr_basys3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_ssr_basys3_behav
