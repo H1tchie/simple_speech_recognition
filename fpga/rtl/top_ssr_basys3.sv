@@ -3,7 +3,7 @@
 /*
  Module name:   top_ssr_basys3
  Authors:       Kacper Ferdek, Mateusz Gibas
- Version:       3.0
+ Version:       3.0z
  Last modified: 2026-01
  Description:   Board-level wrapper Basys3 (XC7A35T).
                 AXI4-Lite jest tu tied-off (stand-alone build); w
