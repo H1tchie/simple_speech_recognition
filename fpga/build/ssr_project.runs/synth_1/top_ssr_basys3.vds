@@ -1,0 +1,157 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Jun  9 20:44:28 2026
+# Process ID: 3825
+# Current directory: /home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.runs/synth_1
+# Command line: vivado -log top_ssr_basys3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_ssr_basys3.tcl
+# Log file: /home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.runs/synth_1/top_ssr_basys3.vds
+# Journal file: /home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/build/ssr_project.runs/synth_1/vivado.jou
+# Running On: cadence22, OS: Linux, CPU Frequency: 3332.031 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+#-----------------------------------------------------------
+source top_ssr_basys3.tcl -notrace
+Command: synth_design -top top_ssr_basys3 -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3933
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2717.809 ; gain = 0.000 ; free physical = 1751 ; free virtual = 13512
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_ssr_basys3' [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/rtl/top_ssr_basys3.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'top_ssr' [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/top_ssr.sv:29]
+INFO: [Synth 8-6157] synthesizing module 'axi4lite_regs' [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/axi/axi4lite_regs.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'axi4lite_regs' (1#1) [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/axi/axi4lite_regs.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'bram_stream_source' [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:16]
+	Parameter INIT_FILE bound to: samples.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'samples.mem' is read successfully [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:40]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[0]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[1]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[2]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[3]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[4]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[5]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[6]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[7]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[8]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[9]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[10]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[11]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[12]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[13]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[14]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[15]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[16]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[17]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[18]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[19]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[20]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[21]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[22]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[23]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[24]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[25]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[26]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[27]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[28]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[29]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[30]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[31]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[32]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[33]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[34]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[35]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[36]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[37]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[38]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[39]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[40]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[41]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[42]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[43]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[44]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[45]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[46]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[47]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[48]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[49]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[50]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[51]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[52]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[53]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[54]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[55]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[56]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[57]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[58]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[59]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[60]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[61]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[62]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[63]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[64]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[65]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[66]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[67]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[68]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[69]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[70]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[71]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[72]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[73]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[74]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[75]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[76]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[77]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[78]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[79]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[80]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[81]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[82]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[83]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[84]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[85]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[86]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[87]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[88]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[89]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[90]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[91]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[92]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[93]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[94]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[95]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[96]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[97]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[98]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'mem[99]' is not inferred as ram due to incorrect usage [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:37]
+INFO: [Common 17-14] Message 'Synth 8-7186' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'bram_stream_source' (2#1) [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/data_source/bram_stream_source.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'preemphasis' [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/preemphasis.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'preemphasis' (3#1) [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/preemphasis.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'framing' [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/framing.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'framing' (4#1) [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/framing.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'window' [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/window.sv:18]
+	Parameter ROM_FILE bound to: window_hamming_512.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'window_hamming_512.mem' is read successfully [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/window.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'window' (5#1) [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/window.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'fft_wrapper' [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/fft_wrapper.sv:32]
+	Parameter SIM_MODE bound to: 32'sb00000000000000000000000000000001 
+INFO: [Synth 8-3876] $readmem data file 'twiddle_cos_512.mem' is read successfully [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/fft_wrapper.sv:57]
+INFO: [Synth 8-3876] $readmem data file 'twiddle_sin_512.mem' is read successfully [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/fft_wrapper.sv:58]
+ERROR: [Synth 8-3380] loop condition does not converge after 2000 iterations [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/fft_wrapper.sv:68]
+ERROR: [Synth 8-6156] failed synthesizing module 'fft_wrapper' [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/dsp/fft_wrapper.sv:32]
+ERROR: [Synth 8-6156] failed synthesizing module 'top_ssr' [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/top_ssr.sv:29]
+ERROR: [Synth 8-6156] failed synthesizing module 'top_ssr_basys3' [/home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/rtl/top_ssr_basys3.sv:15]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 4385.691 ; gain = 1667.883 ; free physical = 2180 ; free virtual = 13518
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 100 Warnings, 0 Critical Warnings and 5 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  9 20:45:09 2026...

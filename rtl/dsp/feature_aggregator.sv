@@ -38,14 +38,14 @@ module feature_aggregator (
     localparam int MFCC_W_IDX  = $clog2(N_MFCC);
     localparam int FEAT_W_IDX  = $clog2(N_FEATURES);
 
-    // isqrt(x) floor, bit po bicie
+    // isqrt(x) floor, stala liczba iteracji (24 = 48/2) - syntezowalne
     function automatic logic [23:0] isqrt48(input logic [47:0] x);
         logic [47:0] rem, root, bit_v;
+        integer i;
         begin
             rem = x; root = 0;
             bit_v = 48'h4000_0000_0000;       // 2^46
-            while (bit_v > x) bit_v = bit_v >> 2;
-            while (bit_v != 0) begin
+            for (i = 0; i < 24; i = i + 1) begin
                 if (rem >= root + bit_v) begin
                     rem  = rem - (root + bit_v);
                     root = (root >> 1) + bit_v;
