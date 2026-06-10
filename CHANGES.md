@@ -1,5 +1,18 @@
 # CHANGES — v3 vs poprzednie wersje
 
+## v3.2 — zgodność z konspektem (klasy, .coe, MicroBlaze) + spójność trening=sprzęt
+
+Zachowane **3 komendy on/off/other** (kody on→01, off→10, other→00).
+Dodane pod konspekt:
+- `tools/wav_to_mem.py`: eksport **.coe** (inicjalizacja BRAM w Vivado) —
+  `--also-coe` lub wyjście `*.coe`; `.mem` dalej do symulacji.
+- Procesor **MicroBlaze + AXI** (sekcja 3.1): IPcore ma gotowy slave AXI4-Lite;
+  dołożenie procesora to robota w Vivado IP Integrator — patrz
+  `docs/MICROBLAZE_AXI.md` (krok po kroku), `fpga/scripts/create_microblaze_bd.tcl`
+  (startowy block design), `sw/ssr_main.c` (soft: start → poll done → read result → LED).
+- Testy jednostkowe modułów w `sim/unit/` + poprawiony `sim/top_ssr/top_ssr_tb.sv`
+  (samokontrola, jawne sterowanie; musi być Simulation Top).
+
 ## v3.2 — pełna spójność trening = symulacja = sprzęt (stałoprzecinkowy DFT)
 
 Cel: **wszystko zgodne z konspektem, a sieć uczy się tylko po wrzuceniu nagrań**,

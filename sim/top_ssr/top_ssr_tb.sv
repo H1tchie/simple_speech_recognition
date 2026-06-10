@@ -3,98 +3,94 @@
 /*
  Module name:   top_ssr_tb
  Authors:       Kacper Ferdek, Mateusz Gibas
- Version:       3.0
- Description:   System testbench dla top_ssr v3.
+ Version:       3.2
+ Description:   Systemowy testbench dla top_ssr.
 
-                Probki audio sa ladowane z samples.mem do BRAM-a w
-                bram_stream_source. TB tylko podaje clk/reset, naciska
-                BTNC, czeka az AXI status pokaze 'done' i wypisuje wynik.
+   !!! WAZNE (Vivado) !!!
+   Ten modul MUSI byc ustawiony jako "Simulation Top"
+   (Sources -> Simulation Sources -> PPM na top_ssr_tb -> Set as Top).
+   Jesli jako top ustawiony jest sam top_ssr, to NIKT nie steruje jego
+   wejsciami -> na zegarze/wejsciach zobaczysz Z, a na wyjsciach X.
+
+   Probki audio sa ladowane z samples.mem do BRAM w bram_stream_source
+   (plik musi byc dodany do projektu). TB podaje clk/reset, naciska BTNC,
+   czeka az siec wystawi wynik i sprawdza, ze komenda jest poprawna.
 */
 //////////////////////////////////////////////////////////////////////////////
 
 module top_ssr_tb;
 
-    logic clk = 0;
-    logic rst_n;
-    logic start_btn;
-    logic but_enable;
-    logic led0;
-    logic [1:0] cmd;
+    // --- sygnaly sterujace (wszystkie jawnie zainicjowane) ---
+    logic        clk        = 1'b0;
+    logic        rst_n      = 1'b0;
+    logic        start_btn  = 1'b0;
+    logic        but_enable = 1'b0;
+    logic        led0;
+    logic [1:0]  cmd;
 
-    always #5 clk = ~clk;   // 100 MHz
+    // zegar 100 MHz
+    always #5 clk = ~clk;
 
     top_ssr uut (
-        .clk(clk),
-        .rst_n(rst_n),
-        .s_axi_awaddr  ('0),
-        .s_axi_awprot  ('0),
-        .s_axi_awvalid (1'b0),
-        .s_axi_awready (),
-        .s_axi_wdata   ('0),
-        .s_axi_wstrb   ('0),
-        .s_axi_wvalid  (1'b0),
-        .s_axi_wready  (),
-        .s_axi_bresp   (),
-        .s_axi_bvalid  (),
-        .s_axi_bready  (1'b1),
-        .s_axi_araddr  ('0),
-        .s_axi_arprot  ('0),
-        .s_axi_arvalid (1'b0),
-        .s_axi_arready (),
-        .s_axi_rdata   (),
-        .s_axi_rresp   (),
-        .s_axi_rvalid  (),
-        .s_axi_rready  (1'b1),
-
-        .start_btn(start_btn),
-        .but_enable(but_enable),
-        .led0(led0),
-        .command_id(cmd)
+        .clk           (clk),
+        .rst_n         (rst_n),
+        // AXI4-Lite nieuzywany w tym tescie - wejscia w stan bezpieczny
+        .s_axi_awaddr  ('0),  .s_axi_awprot ('0), .s_axi_awvalid(1'b0), .s_axi_awready(),
+        .s_axi_wdata   ('0),  .s_axi_wstrb  ('0), .s_axi_wvalid (1'b0), .s_axi_wready (),
+        .s_axi_bresp   (),    .s_axi_bvalid (),   .s_axi_bready (1'b1),
+        .s_axi_araddr  ('0),  .s_axi_arprot ('0), .s_axi_arvalid(1'b0), .s_axi_arready(),
+        .s_axi_rdata   (),    .s_axi_rresp  (),   .s_axi_rvalid (),     .s_axi_rready (1'b1),
+        // sterowanie/wyjscia
+        .start_btn     (start_btn),
+        .but_enable    (but_enable),
+        .led0          (led0),
+        .command_id    (cmd)
     );
 
     initial begin
         $display("[TB] === top_ssr_tb start ===");
 
+        // reset
         rst_n = 1'b0;
-        start_btn = 1'b0;
-        but_enable = 1'b0;
         repeat (20) @(posedge clk);
         rst_n = 1'b1;
         repeat (10) @(posedge clk);
 
-        but_enable = 1'b1;
+        but_enable = 1'b1;          // sw0: pozwol aktualizowac LED
 
-        $display("[TB] BTNC pulse");
+        // impuls BTNC -> start
+        $display("[TB] impuls start_btn");
         start_btn = 1'b1;
         repeat (5) @(posedge clk);
         start_btn = 1'b0;
 
-        // Z DFT O(N^2) w SIM_MODE i N=512 ramek to bedzie dlugo.
-        // Damy duzy zapas.
+        // czekaj na wynik sieci (DFT O(N^2) w SIM -> dlugo; jest duzy zapas)
         wait (uut.nn_value_valid);
         repeat (10) @(posedge clk);
 
-        $display("[TB] cmd=%0d led0=%b", cmd, led0);
-        case (cmd)
-            2'b00: $display("[TB] -> other");
-            2'b01: $display("[TB] -> on");
-            2'b10: $display("[TB] -> off");
-            default: $display("[TB] -> ???");
-        endcase
+        // --- samokontrola ---
+        $display("[TB] cmd=%02b led0=%b", cmd, led0);
+        if (cmd === 2'bxx || cmd === 2'bzz) begin
+            $display("FAIL top_ssr_tb: komenda nieokreslona (X/Z) - czy TB jest Simulation Top?");
+        end else begin
+            case (cmd)
+                2'b01: $display("[TB] rozpoznano -> on");
+                2'b10: $display("[TB] rozpoznano -> off");
+                2'b00: $display("[TB] rozpoznano -> other");
+                default: $display("[TB] rozpoznano -> ??? (%02b)", cmd);
+            endcase
+            $display("PASS top_ssr_tb: pipeline zakonczyl, komenda = %02b", cmd);
+        end
 
         $display("[TB] === top_ssr_tb end ===");
         $finish;
     end
 
+    // bezpiecznik czasowy
     initial begin
         #500ms;
-        $display("[TB] TIMEOUT");
+        $display("FAIL top_ssr_tb: TIMEOUT (siec nie wystawila wyniku)");
         $finish;
-    end
-
-    initial begin
-        $dumpfile("top_ssr_tb.vcd");
-        $dumpvars(0, top_ssr_tb);
     end
 
 endmodule

@@ -54,7 +54,7 @@ def stratified_split(y, val_frac=0.25, seed=0):
     return np.array(tr, dtype=int), np.array(va, dtype=int)
 
 
-def confusion(y_true, y_pred, n=3):
+def confusion(y_true, y_pred, n=len(CLASSES)):
     M = np.zeros((n, n), dtype=int)
     for t, p in zip(y_true, y_pred):
         M[t, p] += 1
@@ -125,7 +125,7 @@ def main():
     best = None
     print("\n== Trening (QAT) - dobor skali wag ==")
     for ws in w_scales:
-        res = nnm.train_qat(Xtr, ytr, n_classes=3, in_scale=in_scale,
+        res = nnm.train_qat(Xtr, ytr, n_classes=len(CLASSES), in_scale=in_scale,
                             epochs=args.epochs, lr=0.02, seed=args.seed,
                             w_scale1=ws, w_scale2=ws, verbose=False)
         Xva_i = np.clip(np.round(Xva * in_scale), -32768, 32767).astype(int)
@@ -153,7 +153,7 @@ def main():
     print("Macierz pomylek (wiersz=prawda, kol=predykcja):")
     print("            " + "  ".join(f"{c:>6s}" for c in CLASSES))
     for i, c in enumerate(CLASSES):
-        print(f"  {c:8s}  " + "  ".join(f"{M[i, j]:6d}" for j in range(3)))
+        print(f"  {c:8s}  " + "  ".join(f"{M[i, j]:6d}" for j in range(len(CLASSES))))
     print(f"Zakres wag:  W1 [{W1.min()},{W1.max()}]  W2 [{W2.min()},{W2.max()}]")
     print(f"Zakres cech int16: [{X_int.min()},{X_int.max()}]")
 
