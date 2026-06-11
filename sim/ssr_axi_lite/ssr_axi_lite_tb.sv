@@ -19,7 +19,7 @@ module ssr_axi_lite_tb;
     localparam ADDR_W = 4;
     localparam DATA_W = 32;
     // sciezka do pliku z probkami (dostosuj wzgledem katalogu symulacji)
-    localparam string DATA_FILE = "../python/generated_files/input_adcoff2.txt";
+    localparam string DATA_FILE = "../python/generated_files/on_8k.txt";
     localparam int    MAX_SAMPLES = 16384;  // ile probek wczytac/wyslac
 
     // offsety rejestrow
