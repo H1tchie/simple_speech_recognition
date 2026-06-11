@@ -1,0 +1,4 @@
+Running: xsim.dir/ssr_axi_lite_tb/axsim ssr_axi_lite_tb -runall
+Design successfully loaded
+Design Loading Memory Usage: 32748 KB (Peak: 32748 KB)
+Design Loading CPU Usage: 3290 ms

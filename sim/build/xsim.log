@@ -1,0 +1,4 @@
+Wyslano 26 probek.
+STATUS=0x00000001 (valid=1)
+RESULT=2  (0=other,1=on,2=off)
+LED0=0

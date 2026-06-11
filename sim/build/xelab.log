@@ -1,0 +1,105 @@
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /home_local/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab work.ssr_axi_lite_tb -snapshot ssr_axi_lite_tb -prj /home/student/mgibas/Desktop/sdup/simple_speech_recognition/sim/ssr_axi_lite/ssr_axi_lite.prj -timescale 1ns/1ps -L unisims_ver -standalone -runall 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/ap_parameters.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/framing_axi.sv" into library work
+INFO: [VRFC 10-311] analyzing module framing_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/windowing.sv" into library work
+INFO: [VRFC 10-311] analyzing module windowing
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/unwrapper.sv" into library work
+INFO: [VRFC 10-311] analyzing module unwrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/zero_padding.sv" into library work
+INFO: [VRFC 10-311] analyzing module zero_padding
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/mel_filter/mel_filter_bank.sv" into library work
+INFO: [VRFC 10-311] analyzing module mel_filter_bank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/mel_filter/reshape_output.sv" into library work
+INFO: [VRFC 10-311] analyzing module reshape_output
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/mel_filter/dB_LUT.sv" into library work
+INFO: [VRFC 10-311] analyzing module dB_LUT
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/mel_filter/multiplier.sv" into library work
+INFO: [VRFC 10-311] analyzing module multiplier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/magnitude.sv" into library work
+INFO: [VRFC 10-311] analyzing module magnitude
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/mean_std.sv" into library work
+INFO: [VRFC 10-311] analyzing module mean_std
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/fifo.sv" into library work
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/convert_to_signed.sv" into library work
+INFO: [VRFC 10-311] analyzing module convert_to_signed
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/top_ap_axi.sv" into library work
+INFO: [VRFC 10-311] analyzing module top_ap_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network_optim/nn_parameters.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network_optim/dense_layer_1.sv" into library work
+INFO: [VRFC 10-311] analyzing module dense_layer_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network_optim/dense_layer_2.sv" into library work
+INFO: [VRFC 10-311] analyzing module dense_layer_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network_optim/final_layer.sv" into library work
+INFO: [VRFC 10-311] analyzing module final_layer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/neural_network_optim/top_nn.sv" into library work
+INFO: [VRFC 10-311] analyzing module top_nn
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/led_logic/led_logic.sv" into library work
+INFO: [VRFC 10-311] analyzing module led_logic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/ssr_axi/ssr_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module ssr_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/ssr_axi/ssr_axi_lite_v1_0_S00_AXI.sv" into library work
+INFO: [VRFC 10-311] analyzing module ssr_axi_lite_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/ssr_axi/ssr_axi_lite_v1_0.sv" into library work
+INFO: [VRFC 10-311] analyzing module ssr_axi_lite_v1_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/sim/ssr_axi_lite/ssr_axi_lite_tb.sv" into library work
+INFO: [VRFC 10-311] analyzing module ssr_axi_lite_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/fft/Butterfly.v" into library work
+INFO: [VRFC 10-311] analyzing module Butterfly
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/fft/DelayBuffer.v" into library work
+INFO: [VRFC 10-311] analyzing module DelayBuffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/fft/FFT64.v" into library work
+INFO: [VRFC 10-311] analyzing module FFT64
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/fft/Multiply.v" into library work
+INFO: [VRFC 10-311] analyzing module Multiply
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/fft/SdfUnit.v" into library work
+INFO: [VRFC 10-311] analyzing module SdfUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/rtl/audio_processing_opt/fft/Twiddle64.v" into library work
+INFO: [VRFC 10-311] analyzing module Twiddle64
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.ap_parameters
+Compiling package work.nn_parameters
+Compiling module work.framing_axi
+Compiling module work.windowing
+Compiling module work.unwrapper
+Compiling module work.zero_padding
+Compiling module work.Butterfly
+Compiling module work.DelayBuffer
+Compiling module work.DelayBuffer(DEPTH=16)
+Compiling module work.Twiddle64
+Compiling module work.Multiply
+Compiling module work.SdfUnit_default
+Compiling module work.DelayBuffer(DEPTH=8)
+Compiling module work.DelayBuffer(DEPTH=4)
+Compiling module work.SdfUnit(M=16)
+Compiling module work.DelayBuffer(DEPTH=2)
+Compiling module work.DelayBuffer(DEPTH=1)
+Compiling module work.SdfUnit(M=4)
+Compiling module work.FFT64
+Compiling module work.magnitude
+Compiling module work.dB_LUT
+Compiling module work.multiplier
+Compiling module work.mel_filter_bank
+Compiling module work.reshape_output_default
+Compiling module work.mean_std
+Compiling module work.fifo
+Compiling module work.convert_to_signed
+Compiling module work.top_ap_axi
+Compiling module work.dense_layer_1
+Compiling module work.dense_layer_2
+Compiling module work.final_layer
+Compiling module work.top_nn
+Compiling module work.led_logic
+Compiling module work.ssr_core
+Compiling module work.ssr_axi_lite_v1_0_S00_AXI_defaul...
+Compiling module work.ssr_axi_lite_tb
+Built simulation snapshot ssr_axi_lite_tb

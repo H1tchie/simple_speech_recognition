@@ -1,0 +1,1 @@
+"work.ssr_axi_lite_tb" -snapshot "ssr_axi_lite_tb" -prj "/home/student/mgibas/Desktop/sdup/simple_speech_recognition/sim/ssr_axi_lite/ssr_axi_lite.prj" -timescale "1ns/1ps" -L "unisims_ver" -standalone -runall 
