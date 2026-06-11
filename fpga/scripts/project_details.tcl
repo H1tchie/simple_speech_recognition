@@ -1,51 +1,84 @@
 # Copyright (C) 2023  AGH University of Science and Technology
-# Project details for generate_bitstream.tcl
+# MTM UEC2
+# Author: Piotr Kaczmarczyk
+#
+# Description:
+# Project detiles required for generate_bitstream.tcl
+# Make sure that project_name, top_module and target are correct.
+# Provide paths to all the files required for synthesis and implementation.
+# Depending on the file type, it should be added in the corresponding section.
+# If the project does not use files of some type, leave the corresponding section commented out.
 
+#-----------------------------------------------------#
+#                   Project details                   #
+#-----------------------------------------------------#
+# Project name                                  -- EDIT
 set project_name ssr_project
-set top_module   top_ssr_basys3
-set target       xc7a35tcpg236-1
+set project_name ssr_project
+set project_name ssr_project
 
+# Top module name                               -- EDIT
+set top_module top_ssr_basys3
+set top_module top_ssr_basys3
+set top_module top_ssr_basys3
+
+# FPGA device
+set target xc7a35tcpg236-1
+
+#-----------------------------------------------------#
+#                    Design sources                   #
+#-----------------------------------------------------#
+# Specify .xdc files location                   -- EDIT
 set xdc_files {
     constraints/top_ssr_basys3.xdc
+    constraints/clk_wiz_4.xdc
 }
 
-# UWAGA: pakiety (ssr_pkg, nn_parameters) MUSZA byc na poczatku.
+# Specify SystemVerilog design files location   -- EDIT
 set sv_files {
-    ../rtl/ssr_pkg.sv
-    ../rtl/neural_network/nn_parameters.sv
-
-    ../rtl/data_source/bram_stream_source.sv
-    ../rtl/dsp/preemphasis.sv
-    ../rtl/dsp/framing.sv
-    ../rtl/dsp/window.sv
-    ../rtl/dsp/fft_wrapper.sv
-    ../rtl/dsp/mel_filter_bank.sv
-    ../rtl/dsp/mfcc.sv
-    ../rtl/dsp/feature_aggregator.sv
-
-    ../rtl/neural_network/dense_layer.sv
-    ../rtl/neural_network/final_layer.sv
-    ../rtl/neural_network/top_nn.sv
-    ../rtl/neural_network/top_nn_axis.sv
-
     ../rtl/led_logic/led_logic.sv
-
-    ../rtl/axi/axi4lite_regs.sv
-    ../rtl/top_ssr.sv
-
+    ../rtl/top_ssr.sv 
+    ../rtl/audio_processing_opt/framing.sv  
+    ../rtl/audio_processing_opt/windowing.sv 
+    ../rtl/audio_processing_opt/unwrapper.sv 
+    ../rtl/audio_processing_opt/zero_padding.sv 
+    ../rtl/audio_processing_opt/mel_filter/mel_filter_bank.sv 
+    ../rtl/audio_processing_opt/mel_filter/reshape_output.sv 
+    ../rtl/audio_processing_opt/mel_filter/dB_LUT.sv
+    ../rtl/audio_processing_opt/mel_filter/multiplier.sv 
+    ../rtl/audio_processing_opt/magnitude.sv 
+    ../rtl/audio_processing_opt/mean_std.sv 
+    ../rtl/audio_processing_opt/fifo.sv
+    ../rtl/audio_processing_opt/convert_to_signed.sv 
+    ../rtl/audio_processing_opt/top_ap.sv
+    ../rtl/audio_processing_opt/ap_parameters.sv
+    ../rtl/neural_network_optim/nn_parameters.sv
+    ../rtl/neural_network_optim/dense_layer_2.sv
+    ../rtl/neural_network_optim/dense_layer_1.sv
+    ../rtl/neural_network_optim/final_layer.sv
+    ../rtl/neural_network_optim/top_nn.sv
     rtl/top_ssr_basys3.sv
 }
 
-# Memory init files (generowane przez tools/build_all.py)
-set mem_files {
-    ../rtl/dsp/window_hamming_512.mem
-    ../rtl/dsp/twiddle_cos_512.mem
-    ../rtl/dsp/twiddle_sin_512.mem
-    ../rtl/dsp/mel_bank_dense.mem
-    ../rtl/dsp/dct_coeffs.mem
-    ../rtl/neural_network/dense1_weights.mem
-    ../rtl/neural_network/dense1_bias.mem
-    ../rtl/neural_network/dense2_weights.mem
-    ../rtl/neural_network/dense2_bias.mem
-    ../data/samples.mem
+# Specify Verilog design files location         -- EDIT
+set verilog_files {
+    rtl/clk_wiz_4_clk_wiz.v
+    ../rtl/audio_processing_opt/fft/Butterfly.v 
+    ../rtl/audio_processing_opt/fft/DelayBuffer.v 
+    ../rtl/audio_processing_opt/fft/FFT64.v 
+    ../rtl/audio_processing_opt/fft/Multiply.v 
+    ../rtl/audio_processing_opt/fft/SdfUnit.v 
+    ../rtl/audio_processing_opt/fft/Twiddle64.v 
+ 
 }
+
+# Specify VHDL design files location            -- EDIT
+set vhdl_files {
+    ../rtl/adc/i2c_master.vhd
+    ../rtl/adc/pmod_adc_ad7991.vhd
+}
+
+# Specify files for a memory initialization     -- EDIT
+# set mem_files {
+#    path/to/file.data
+# }

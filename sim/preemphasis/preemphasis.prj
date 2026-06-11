@@ -1,3 +1,0 @@
-sv work ../../rtl/ssr_pkg.sv \
-    ../../rtl/dsp/preemphasis.sv \
-    preemphasis_tb.sv

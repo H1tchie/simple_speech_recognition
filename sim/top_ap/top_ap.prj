@@ -1,0 +1,21 @@
+sv work ../../rtl/audio_processing_opt/ap_parameters.sv \
+    ../../rtl/audio_processing_opt/framing.sv \
+    ../../rtl/audio_processing_opt/windowing.sv \
+    ../../rtl/audio_processing_opt/unwrapper.sv \
+    ../../rtl/audio_processing_opt/zero_padding.sv \
+    ../../rtl/audio_processing_opt/mel_filter/mel_filter_bank.sv \
+    ../../rtl/audio_processing_opt/mel_filter/reshape_output.sv \
+    ../../rtl/audio_processing_opt/mel_filter/dB_LUT.sv \
+    ../../rtl/audio_processing_opt/mel_filter/multiplier.sv \
+    ../../rtl/audio_processing_opt/magnitude.sv \
+    ../../rtl/audio_processing_opt/mean_std.sv \
+    ../../rtl/audio_processing_opt/fifo.sv \
+    ../../rtl/audio_processing_opt/convert_to_signed.sv \
+    ../../rtl/audio_processing_opt/top_ap.sv \
+        top_ap_tb.sv
+verilog work ../../rtl/audio_processing_opt/fft/Butterfly.v \
+        ../../rtl/audio_processing_opt/fft/DelayBuffer.v \
+        ../../rtl/audio_processing_opt/fft/FFT64.v \
+        ../../rtl/audio_processing_opt/fft/Multiply.v \
+        ../../rtl/audio_processing_opt/fft/SdfUnit.v \
+        ../../rtl/audio_processing_opt/fft/Twiddle64.v 

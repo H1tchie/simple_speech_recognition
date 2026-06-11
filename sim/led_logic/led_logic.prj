@@ -1,0 +1,2 @@
+sv work ../../rtl/led_logic/led_logic.sv \
+        led_logic_tb.sv

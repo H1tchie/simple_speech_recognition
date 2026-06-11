@@ -2,95 +2,128 @@
 //////////////////////////////////////////////////////////////////////////////
 /*
  Module name:   top_ssr_tb
- Authors:       Kacper Ferdek, Mateusz Gibas
- Version:       3.2
- Description:   Systemowy testbench dla top_ssr.
-
-   !!! WAZNE (Vivado) !!!
-   Ten modul MUSI byc ustawiony jako "Simulation Top"
-   (Sources -> Simulation Sources -> PPM na top_ssr_tb -> Set as Top).
-   Jesli jako top ustawiony jest sam top_ssr, to NIKT nie steruje jego
-   wejsciami -> na zegarze/wejsciach zobaczysz Z, a na wyjsciach X.
-
-   Probki audio sa ladowane z samples.mem do BRAM w bram_stream_source
-   (plik musi byc dodany do projektu). TB podaje clk/reset, naciska BTNC,
-   czeka az siec wystawi wynik i sprawdza, ze komenda jest poprawna.
-*/
+ Authors:       Mateusz Gibas, Kacper Ferdek
+ Version:       1.1
+ Last modified: 2024-08-29
+ Coding style: safe, with FPGA sync reset
+ Description:  test bench for top module of ssr
+ */
 //////////////////////////////////////////////////////////////////////////////
+
+`timescale 1ns/1ps
 
 module top_ssr_tb;
 
-    // --- sygnaly sterujace (wszystkie jawnie zainicjowane) ---
-    logic        clk        = 1'b0;
-    logic        rst_n      = 1'b0;
-    logic        start_btn  = 1'b0;
-    logic        but_enable = 1'b0;
-    logic        led0;
-    logic [1:0]  cmd;
+//------------------------------------------------------------------------------
+// Local variables
+//------------------------------------------------------------------------------
 
-    // zegar 100 MHz
-    always #5 clk = ~clk;
+logic clk;
+logic rst;
+logic but;
+wire scl;  
+wire sda;  
+logic led0;
 
-    top_ssr uut (
-        .clk           (clk),
-        .rst_n         (rst_n),
-        // AXI4-Lite nieuzywany w tym tescie - wejscia w stan bezpieczny
-        .s_axi_awaddr  ('0),  .s_axi_awprot ('0), .s_axi_awvalid(1'b0), .s_axi_awready(),
-        .s_axi_wdata   ('0),  .s_axi_wstrb  ('0), .s_axi_wvalid (1'b0), .s_axi_wready (),
-        .s_axi_bresp   (),    .s_axi_bvalid (),   .s_axi_bready (1'b1),
-        .s_axi_araddr  ('0),  .s_axi_arprot ('0), .s_axi_arvalid(1'b0), .s_axi_arready(),
-        .s_axi_rdata   (),    .s_axi_rresp  (),   .s_axi_rvalid (),     .s_axi_rready (1'b1),
-        // sterowanie/wyjscia
-        .start_btn     (start_btn),
-        .but_enable    (but_enable),
-        .led0          (led0),
-        .command_id    (cmd)
-    );
+//------------------------------------------------------------------------------
+// Clock generation
+//------------------------------------------------------------------------------
 
-    initial begin
-        $display("[TB] === top_ssr_tb start ===");
+always #5 clk = ~clk;  // 100 MHz clock
 
-        // reset
-        rst_n = 1'b0;
-        repeat (20) @(posedge clk);
-        rst_n = 1'b1;
-        repeat (10) @(posedge clk);
+//------------------------------------------------------------------------------
+// DUT instantiation
+//------------------------------------------------------------------------------
 
-        but_enable = 1'b1;          // sw0: pozwol aktualizowac LED
+top_ssr uut (
+    .clk(clk),
+    .rst(rst),
+    .but(but),
+    .scl(scl),
+    .sda(sda),
+    .led0(led0)
+);
 
-        // impuls BTNC -> start
-        $display("[TB] impuls start_btn");
-        start_btn = 1'b1;
-        repeat (5) @(posedge clk);
-        start_btn = 1'b0;
+//------------------------------------------------------------------------------
+// Testbench sequence
+//------------------------------------------------------------------------------
 
-        // czekaj na wynik sieci (DFT O(N^2) w SIM -> dlugo; jest duzy zapas)
-        wait (uut.nn_value_valid);
-        repeat (10) @(posedge clk);
+initial begin
+    // Initialize signals
+    clk = 0;
+    rst = 0;
+    but = 0;
 
-        // --- samokontrola ---
-        $display("[TB] cmd=%02b led0=%b", cmd, led0);
-        if (cmd === 2'bxx || cmd === 2'bzz) begin
-            $display("FAIL top_ssr_tb: komenda nieokreslona (X/Z) - czy TB jest Simulation Top?");
-        end else begin
-            case (cmd)
-                2'b01: $display("[TB] rozpoznano -> on");
-                2'b10: $display("[TB] rozpoznano -> off");
-                2'b00: $display("[TB] rozpoznano -> other");
-                default: $display("[TB] rozpoznano -> ??? (%02b)", cmd);
-            endcase
-            $display("PASS top_ssr_tb: pipeline zakonczyl, komenda = %02b", cmd);
+    // Apply reset
+    #10;
+    rst = 1;
+
+    // Deassert reset
+    #20;
+    rst = 0;
+
+    // Simulate I2C activity on scl and sda
+    #30;
+    i2c_write(8'hA5);  // Example I2C transaction
+
+    // Simulate button press
+    #50;
+    but = 1;
+    #10;
+    but = 0;
+
+    // Wait for some time to observe behavior
+    #100;
+
+    // Check the LED output
+    $display("LED output: %b", led0);
+
+    // End simulation
+    $finish;
+end
+
+//------------------------------------------------------------------------------
+// Task to simulate I2C Write Operation
+//------------------------------------------------------------------------------
+
+task i2c_write(input [7:0] data_byte);
+    integer i;
+    begin
+        // Start condition (SDA goes low while SCL is high)
+        force sda = 0;
+        #10;
+        force scl = 0;
+
+        // Send byte (MSB first)
+        for (i = 7; i >= 0; i = i - 1) begin
+            force scl = 0;
+            #5;
+            force sda = data_byte[i];  // Set data bit
+            #5;
+            force scl = 1; // Clock the data bit
+            #10;
         end
 
-        $display("[TB] === top_ssr_tb end ===");
-        $finish;
+        // Acknowledge bit (release SDA and check if it gets pulled low)
+        force scl = 0;
+        #5;
+        release sda; // Release SDA
+        #5;
+        force scl = 1;
+        #10;
+        
+        // Stop condition (SDA goes high while SCL is high)
+        force scl = 0;
+        #5;
+        force sda = 0;
+        #5;
+        force scl = 1;
+        #5;
+        force sda = 1;  // SDA high (stop condition)
+        #10;
+        release scl;
+        release sda;
     end
-
-    // bezpiecznik czasowy
-    initial begin
-        #500ms;
-        $display("FAIL top_ssr_tb: TIMEOUT (siec nie wystawila wyniku)");
-        $finish;
-    end
+endtask
 
 endmodule
