@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Jun 11 18:25:36 2026
+# Process ID: 11368
+# Current directory: /home/student/mgibas/Desktop/sdup/simple_speech_recognition
+# Command line: vivado -mode batch -source ip/package_ip_2021_2.tcl
+# Log file: /home/student/mgibas/Desktop/sdup/simple_speech_recognition/vivado.log
+# Journal file: /home/student/mgibas/Desktop/sdup/simple_speech_recognition/vivado.jou
+# Running On: cadence22, OS: Linux, CPU Frequency: 3457.617 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+#-----------------------------------------------------------
+source ip/package_ip_2021_2.tcl
+# set repo     [pwd]
+# set part     xc7a35tcpg236-1
+# set ip_name  ssr_axi_lite
+# set ip_dir   $repo/ip_repo/${ip_name}_1.0
+# set tmp_proj $repo/ip_repo/_pkg_proj
+# file mkdir $repo/ip_repo
+# file delete -force $tmp_proj
+# file delete -force $ip_dir
+# create_project pkg_${ip_name} $tmp_proj -part $part -force
+# set sv_files [list \
+#     $repo/rtl/ssr_axi/ssr_axi_lite_v1_0.sv \
+#     $repo/rtl/ssr_axi/ssr_axi_lite_v1_0_S00_AXI.sv \
+#     $repo/rtl/ssr_axi/ssr_core.sv \
+#     $repo/rtl/led_logic/led_logic.sv \
+#     $repo/rtl/audio_processing_opt/ap_parameters.sv \
+#     $repo/rtl/audio_processing_opt/framing_axi.sv \
+#     $repo/rtl/audio_processing_opt/top_ap_axi.sv \
+#     $repo/rtl/audio_processing_opt/windowing.sv \
+#     $repo/rtl/audio_processing_opt/unwrapper.sv \
+#     $repo/rtl/audio_processing_opt/zero_padding.sv \
+#     $repo/rtl/audio_processing_opt/magnitude.sv \
+#     $repo/rtl/audio_processing_opt/mean_std.sv \
+#     $repo/rtl/audio_processing_opt/fifo.sv \
+#     $repo/rtl/audio_processing_opt/convert_to_signed.sv \
+#     $repo/rtl/audio_processing_opt/mel_filter/mel_filter_bank.sv \
+#     $repo/rtl/audio_processing_opt/mel_filter/reshape_output.sv \
+#     $repo/rtl/audio_processing_opt/mel_filter/dB_LUT.sv \
+#     $repo/rtl/audio_processing_opt/mel_filter/multiplier.sv \
+#     $repo/rtl/neural_network_optim/nn_parameters.sv \
+#     $repo/rtl/neural_network_optim/dense_layer_1.sv \
+#     $repo/rtl/neural_network_optim/dense_layer_2.sv \
+#     $repo/rtl/neural_network_optim/final_layer.sv \
+#     $repo/rtl/neural_network_optim/top_nn.sv \
+# ]
+# set v_files [list \
+#     $repo/rtl/audio_processing_opt/fft/Butterfly.v \
+#     $repo/rtl/audio_processing_opt/fft/DelayBuffer.v \
+#     $repo/rtl/audio_processing_opt/fft/FFT64.v \
+#     $repo/rtl/audio_processing_opt/fft/Multiply.v \
+#     $repo/rtl/audio_processing_opt/fft/SdfUnit.v \
+#     $repo/rtl/audio_processing_opt/fft/Twiddle64.v \
+# ]
+# add_files -norecurse $sv_files
+# add_files -norecurse $v_files
+WARNING: [Vivado 12-818] No files matched '*'
+# set_property file_type {SystemVerilog} [get_files -filter {FILE_TYPE == Verilog && NAME =~ *.sv}]
+ERROR: [Common 17-55] 'set_property' expects at least one object.
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 11 18:25:47 2026...

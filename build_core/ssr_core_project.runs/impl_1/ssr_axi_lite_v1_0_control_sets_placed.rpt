@@ -1,0 +1,207 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Sun Jun 14 14:41:04 2026
+| Host         : cadence22 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_control_sets -verbose -file ssr_axi_lite_v1_0_control_sets_placed.rpt
+| Design       : ssr_axi_lite_v1_0
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   129 |
+|    Minimum number of control sets                        |   129 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   336 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   129 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |    65 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    52 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             505 |          139 |
+| No           | No                    | Yes                    |              65 |           19 |
+| No           | Yes                   | No                     |            1962 |          535 |
+| Yes          | No                    | No                     |             381 |          143 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            5399 |         2043 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|       Clock Signal      |                                    Enable Signal                                    |                                         Set/Reset Signal                                         | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_final_layer/led0_nxt           | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                1 |              1 |         1.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/slv_reg_rden                                         | ssr_axi_lite_v1_0_S00_AXI_inst/axi_wready_i_1_n_0                                                |                1 |              2 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                     | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_FFT64/SU1/DB1/buf_re[0][15]_i_1_n_0         |                2 |              4 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/p_1_in__0[11]                                        | ssr_axi_lite_v1_0_S00_AXI_inst/axi_wready_i_1_n_0                                                |                3 |              4 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/rst_cnt[3]_i_1_n_0                                   | ssr_axi_lite_v1_0_S00_AXI_inst/axi_wready_i_1_n_0                                                |                1 |              4 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_reshape_output/q_counter0      | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_reshape_output/q_counter[0]                 |                1 |              5 |         5.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/sample_valid                                         | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                3 |              6 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_mel_filter_bank/d_counter      | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_mel_filter_bank/q_counter[5]_i_1_n_0        |                2 |              6 |         3.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_2/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |              8 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/p_1_in__0[7]                                         | ssr_axi_lite_v1_0_S00_AXI_inst/axi_wready_i_1_n_0                                                |                7 |              8 |         1.14 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             11 |         1.83 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[53][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                5 |             12 |         2.40 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[40][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                8 |             12 |         1.50 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[52][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                7 |             12 |         1.71 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[51][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[50][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                9 |             12 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[4][11]_i_1_n_0  | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                3 |             12 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[49][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                5 |             12 |         2.40 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[48][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                8 |             12 |         1.50 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[47][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                8 |             12 |         1.50 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[46][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                8 |             12 |         1.50 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[45][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                5 |             12 |         2.40 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[44][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                9 |             12 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[43][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[42][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[41][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                5 |             12 |         2.40 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                     | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_unwrapper/j[0]_i_1_n_0                      |                3 |             12 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[54][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |               10 |             12 |         1.20 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[55][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                7 |             12 |         1.71 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[56][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                4 |             12 |         3.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[57][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                7 |             12 |         1.71 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[58][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[59][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[5][11]_i_1_n_0  | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                8 |             12 |         1.50 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[60][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                7 |             12 |         1.71 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[61][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                9 |             12 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[62][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                4 |             12 |         3.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[6][11]_i_1_n_0  | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                5 |             12 |         2.40 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[7][11]_i_1_n_0  | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                7 |             12 |         1.71 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[8][11]_i_1_n_0  | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                7 |             12 |         1.71 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[9][11]_i_1_n_0  | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer_nxt             | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[16][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                4 |             12 |         3.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[23][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                4 |             12 |         3.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[22][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[21][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[20][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                7 |             12 |         1.71 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[1][11]_i_1_n_0  | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                5 |             12 |         2.40 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[19][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[18][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                9 |             12 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[17][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                8 |             12 |         1.50 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[24][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                4 |             12 |         3.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[15][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                9 |             12 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[14][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                7 |             12 |         1.71 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[13][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                4 |             12 |         3.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[12][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                5 |             12 |         2.40 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[11][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                5 |             12 |         2.40 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[3][11]_i_1_n_0  | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[10][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                7 |             12 |         1.71 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[32][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                5 |             12 |         2.40 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[39][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                7 |             12 |         1.71 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[38][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[37][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                4 |             12 |         3.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[36][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                8 |             12 |         1.50 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[35][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[34][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[33][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                9 |             12 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[31][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                8 |             12 |         1.50 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[30][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                7 |             12 |         1.71 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[2][11]_i_1_n_0  | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                7 |             12 |         1.71 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[29][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                9 |             12 |         1.33 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[28][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                7 |             12 |         1.71 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[27][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[26][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                6 |             12 |         2.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/buffer[25][11]_i_1_n_0 | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |                4 |             12 |         3.00 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                     | ssr_axi_lite_v1_0_S00_AXI_inst/axi_wready_i_1_n_0                                                |                5 |             13 |         2.60 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                     | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_FFT64/SU3/rst_cnt_reg[3][1]                 |                6 |             15 |         2.50 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                     | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_FFT64/SU3/rst_cnt_reg[3][0]                 |                6 |             16 |         2.67 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[1][23]_i_1_n_0  |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[21][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[20][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[22][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[23][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[24][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[25][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[26][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[27][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[28][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[29][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[2][23]_i_1_n_0  |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[30][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[3][23]_i_1_n_0  |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[4][23]_i_1_n_0  |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[5][23]_i_1_n_0  |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[6][23]_i_1_n_0  |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[7][23]_i_1_n_0  |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[8][23]_i_1_n_0  |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[9][23]_i_1_n_0  |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[18][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[17][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[19][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[16][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[15][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[14][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[13][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[12][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[11][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[10][23]_i_1_n_0 |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/output_vector[0][23]_i_1_n_0  |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/RSTP                          |                6 |             24 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_mel_filter_bank/d_counter1     | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_mel_filter_bank/q_ascending[0]_i_1_n_0      |                8 |             32 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_2/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_2/output_vector[1][31]_i_1_n_0  |                8 |             32 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_2/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_2/output_vector[0][31]_i_1_n_0  |                8 |             32 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_2/CEP              | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_2/RSTP                          |                8 |             32 |         4.00 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_mel_filter_bank/d_counter1     | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |               16 |             54 |         3.38 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_mel_filter_bank/p_1_out        |                                                                                                  |               18 |            122 |         6.78 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_FFT64/SU3/real_squared_nxt     | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |               41 |            126 |         3.07 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_mel_filter_bank/q_valid_reg[0] |                                                                                                  |               63 |            160 |         2.54 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_mel_filter_bank/E[0]           |                                                                                                  |               62 |            160 |         2.58 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                     | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_2/RSTM                          |               50 |            189 |         3.78 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                     | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |               90 |            267 |         2.97 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_mel_filter_bank/p_2_out        | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |               99 |            320 |         3.23 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_mean_std/E[0]                  | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |              145 |            416 |         2.87 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_mel_filter_bank/p_1_out        | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |              158 |            564 |         3.57 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                     |                                                                                                  |              139 |            617 |         4.44 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/E[0]                   | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |              246 |            710 |         2.89 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_unwrapper/wrapper_ready_nxt    | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |              321 |            722 |         2.25 |
+|  s00_axi_aclk_IBUF_BUFG | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/frame_ready_nxt        | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_ap/u_framing/SR[0]                               |              358 |            780 |         2.18 |
+|  s00_axi_aclk_IBUF_BUFG |                                                                                     | ssr_axi_lite_v1_0_S00_AXI_inst/u_ssr_core/u_top_nn/u_dense_layer_1/sum[30][23]_i_1_n_0           |              392 |           1511 |         3.85 |
++-------------------------+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

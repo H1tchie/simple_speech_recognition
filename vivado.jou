@@ -2,12 +2,56 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Thu Jun 11 18:25:36 2026
-# Process ID: 11368
+# Start of session at: Sun Jun 14 15:10:23 2026
+# Process ID: 15476
 # Current directory: /home/student/mgibas/Desktop/sdup/simple_speech_recognition
-# Command line: vivado -mode batch -source ip/package_ip_2021_2.tcl
+# Command line: vivado
 # Log file: /home/student/mgibas/Desktop/sdup/simple_speech_recognition/vivado.log
 # Journal file: /home/student/mgibas/Desktop/sdup/simple_speech_recognition/vivado.jou
-# Running On: cadence22, OS: Linux, CPU Frequency: 3457.617 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+# Running On: cadence22, OS: Linux, CPU Frequency: 3661.523 MHz, CPU Physical cores: 4, Host memory: 16720 MB
 #-----------------------------------------------------------
-source ip/package_ip_2021_2.tcl
+start_gui
+open_project /home/student/mgibas/Desktop/sdup/simple_speech_recognition/ssr_mb/ssr_mb.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/student/mgibas/Desktop/sdup/simple_speech_recognition/ssr_mb/ssr_mb.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv cadence:user:ssr_axi_lite_v1_0:1.0 ssr_axi_lite_v1_0_0
+endgroup
+set_property location {3 655 -269} [get_bd_cells ssr_axi_lite_v1_0_0]
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {None} clk {New Clocking Wizard} cores {1} debug_module {Debug Only} ecc {None} local_mem {64KB} preset {None}}  [get_bd_cells microblaze_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_uartlite_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins axi_uartlite_0/UART]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins clk_wiz_1/CLK_IN1_D]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins clk_wiz_1/reset]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/ssr_axi_lite_v1_0_0/s00_axi} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins ssr_axi_lite_v1_0_0/s00_axi]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} CONFIG.CLKOUT1_JITTER {151.636}] [get_bd_cells clk_wiz_1]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ssr_axi_lite_v1_0_0/led0]
+endgroup
+validate_bd_design
+make_wrapper -files [get_files /home/student/mgibas/Desktop/sdup/simple_speech_recognition/ssr_mb/ssr_mb.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse /home/student/mgibas/Desktop/sdup/simple_speech_recognition/ssr_mb/ssr_mb.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+add_files -fileset constrs_1 -norecurse /home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/constraints/top_ssr_mb_basys3.xdc
+import_files -fileset constrs_1 /home/student/mgibas/Desktop/sdup/simple_speech_recognition/fpga/constraints/top_ssr_mb_basys3.xdc
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+reset_run design_1_axi_uartlite_0_0_synth_1
+reset_run design_1_rst_clk_wiz_1_100M_0_synth_1
+reset_run design_1_microblaze_0_0_synth_1
+reset_run design_1_clk_wiz_1_0_synth_1
+reset_run design_1_lmb_bram_0_synth_1
+reset_run design_1_ssr_axi_lite_v1_0_0_0_synth_1
+reset_run design_1_dlmb_v10_0_synth_1
+reset_run design_1_mdm_1_0_synth_1

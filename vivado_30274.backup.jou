@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Jun 14 14:27:24 2026
+# Process ID: 30274
+# Current directory: /home/student/mgibas/Desktop/sdup/simple_speech_recognition
+# Command line: vivado -mode batch -source build_project_2021_2.tcl
+# Log file: /home/student/mgibas/Desktop/sdup/simple_speech_recognition/vivado.log
+# Journal file: /home/student/mgibas/Desktop/sdup/simple_speech_recognition/vivado.jou
+# Running On: cadence22, OS: Linux, CPU Frequency: 3667.773 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+#-----------------------------------------------------------
+source build_project_2021_2.tcl

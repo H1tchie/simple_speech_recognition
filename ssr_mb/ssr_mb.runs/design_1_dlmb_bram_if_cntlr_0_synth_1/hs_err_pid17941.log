@@ -1,0 +1,18 @@
+#
+# An unexpected error has occurred (6)
+#
+Stack:
+/lib64/libc.so.6(+0x36400) [0x7fee09db5400]
+/lib64/libc.so.6(gsignal+0x37) [0x7fee09db5387]
+/lib64/libc.so.6(abort+0x148) [0x7fee09db6a78]
+/home_local/Xilinx/Vivado/2021.2/lib/lnx64.o/Default/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x15d) [0x7fee0a3f333d]
+/home_local/Xilinx/Vivado/2021.2/lib/lnx64.o/Default/libstdc++.so.6(+0x8e316) [0x7fee0a3f1316]
+/home_local/Xilinx/Vivado/2021.2/lib/lnx64.o/Default/libstdc++.so.6(+0x8e361) [0x7fee0a3f1361]
+/home_local/Xilinx/Vivado/2021.2/lib/lnx64.o/Default/libstdc++.so.6(__cxa_rethrow+0x46) [0x7fee0a3f15c6]
+/home_local/Xilinx/Vivado/2021.2/lib/lnx64.o/libtcmalloc.so.4(+0x181cc) [0x7fee0bd4b1cc]
+/home_local/Xilinx/Vivado/2021.2/lib/lnx64.o/libtcmalloc.so.4(operator new(unsigned long)+0x24c) [0x7fee0bd6e6ac]
+/home_local/Xilinx/Vivado/2021.2/lib/lnx64.o/librdi_common.so(HUTFileUtils::checkRegistry_real(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)+0x7d9) [0x7fee0b434109]
+/home_local/Xilinx/Vivado/2021.2/lib/lnx64.o/librdi_common.so(HUTFileUtils::doWork()+0xe0) [0x7fee0b434790]
+/home_local/Xilinx/Vivado/2021.2/lib/lnx64.o/librdi_common.so(HUTFileUtils::WorkThreadProc(void*)+0x9) [0x7fee0b4348f9]
+/lib64/libpthread.so.0(+0x7ea5) [0x7fee09b6aea5]
+/lib64/libc.so.6(clone+0x6d) [0x7fee09e7db0d]
