@@ -41,13 +41,12 @@ end
 //------------------------------------------------------------------------------
 
 always_comb begin
-        if(input_vector[0] > input_vector[1] && input_vector[0] > input_vector[2]) 
-            output_value_nxt = 2'b01;
-        else if(input_vector[2] > input_vector[0] && input_vector[2] > input_vector[1])
-            output_value_nxt = 2'b00;
-        else  
-            output_value_nxt = 2'b10;
-                  
+    if(input_vector[0] > input_vector[1] && input_vector[0] > input_vector[2]) 
+        output_value_nxt = 2'b01;  // on  → 1
+    else if(input_vector[1] > input_vector[0] && input_vector[1] > input_vector[2])
+        output_value_nxt = 2'b10;  // off → 2
+    else  
+        output_value_nxt = 2'b00;  // other/nothing → 0
 end
 
 endmodule
