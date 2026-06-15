@@ -1,54 +1,57 @@
 `timescale 1ns/1ps
-//////////////////////////////////////////////////////////////////////////////
-/*
- Module name:   led_nn_tb
- Authors:       Mateusz Gibas, Kacper Ferdek
- Version:       1.1
- Last modified: 2024-08-29
- Coding style: safe, with FPGA sync reset
- Description:  test bench for neural network top module
- */
-//////////////////////////////////////////////////////////////////////////////
-
 module top_nn_tb;
-
-    // Parameters
     localparam IN_SIZE = 26;  
 
-
-    // Testbench signals
-    logic signed [15:0] input_vector [IN_SIZE-1:0];  // Unpacked array
+    logic signed [15:0] input_vector [IN_SIZE-1:0];
     logic [1:0] output_value;  
-    logic clk;
-    logic rst;
-    // Instantiate the top_nn module
+    logic clk, rst;
+
     top_nn uut (
+        .clk,
+        .rst,
         .input_vector(input_vector),
-        .output_value(output_value),
-        .clk(clk),
-        .rst(rst)
+        .output_value(output_value)
     );
+
     always #5 clk = ~clk;
-    // Stimulus process
+
+    task automatic run_test(input string mem_file, input string label);
+        // Zeruj input
+        for (int i = 0; i < IN_SIZE; i++) 
+            input_vector[i] = '0;
+        
+        // Trzymaj reset
+        rst = 1;
+        #1000;
+        
+        // Zaladuj dane PODCZAS resetu
+        $readmemh(mem_file, input_vector);
+        #100;
+        
+        // Dopiero teraz zwolnij reset - siec startuje z poprawnymi danymi
+        rst = 0;
+        
+        #300000;
+        $display("output_value: %0d (0=other, 1=on, 2=off) <- %s", output_value, label);
+        $display("---");
+    endtask
+
     initial begin
         clk = 0;
         rst = 0;
+        for (int i = 0; i < IN_SIZE; i++) 
+            input_vector[i] = '0;
+        #100;
 
-        #1000;
-        rst = 1;
-        #1000;
-        rst = 0;
-        // Initialize input_vector with values from a preprocessed WAV file(can choose from: input_vector***.mem ***-oth[],on[],off[])
-        $readmemh("../python/generated_files/input_vectoroth.mem", input_vector);
+        run_test("C:/Users/ferdz/Desktop/SDUP/sim/python/generated_files/input_vectoron_0.mem",  "ON_BAD  -> oczekiwane 1");
+        run_test("C:/Users/ferdz/Desktop/SDUP/sim/python/generated_files/input_vectoron_1.mem",  "ON_GOOD  -> oczekiwane 1");
+        run_test("C:/Users/ferdz/Desktop/SDUP/sim/python/generated_files/input_vectoron_2.mem",  "ON_BAD  -> oczekiwane 1");
+        run_test("C:/Users/ferdz/Desktop/SDUP/sim/python/generated_files/input_vectoroff_0.mem", "OFF_BAD -> oczekiwane 2");
+        run_test("C:/Users/ferdz/Desktop/SDUP/sim/python/generated_files/input_vectoroff_5.mem", "OFF_GOOD -> oczekiwane 2");
+        run_test("C:/Users/ferdz/Desktop/SDUP/sim/python/generated_files/input_vectoroth_15.mem", "OTH_GOOD -> oczekiwane 0");
+        run_test("C:/Users/ferdz/Desktop/SDUP/sim/python/generated_files/input_vectoroth_16.mem", "OTH_BAD -> oczekiwane 0");
+      
 
-        // Wait for some time to observe output
-
-        #300000;
-        // Display intermediate and output probabilities
-        $display(" output_value: %p;; 0-nothing, 1-on, 2-off", output_value);
-
-        // Finish simulation
         $stop;
     end
-
 endmodule
