@@ -1,0 +1,6 @@
+sv work ../../rtl/neural_network_optim/nn_parameters.sv \
+        ../../rtl/neural_network_optim/dense_layer_2.sv \
+        ../../rtl/neural_network_optim/dense_layer_1.sv \
+        ../../rtl/neural_network_optim/final_layer.sv \
+        ../../rtl/neural_network_optim/top_nn.sv \
+        top_nn_tb.sv
