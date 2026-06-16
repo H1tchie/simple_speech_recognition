@@ -42,7 +42,7 @@ module feature_aggregator (
 
     // akumulatory per coeff
     logic signed [31:0] sum_acc  [N_MFCC-1:0];
-    logic        [47:0] sumsq_acc[N_MFCC-1:0];
+    logic        [63:0] sumsq_acc[N_MFCC-1:0];
     logic [$clog2(N_MFCC)-1:0] coeff_idx;
 
     // wyniki
@@ -50,19 +50,23 @@ module feature_aggregator (
     logic [$clog2(N_FEATURES)-1:0] out_idx;
 
     // stan glowny
-    typedef enum logic [2:0] {
-        S_ACC, S_VARNUM, S_SQRT, S_DIV, S_NEXTK, S_EMIT, S_DONE
+    typedef enum logic [3:0] {
+        S_ACC, S_SQ, S_MUL, S_SUB, S_SQRTINIT, S_SQRT, S_DIV, S_NEXTK, S_EMIT, S_DONE
     } state_t;
     state_t state;
 
     logic [$clog2(N_MFCC)-1:0] calc_k;
 
     // rejestry posrednie obliczen
-    logic signed [63:0] var_num;       // N*sumsq - suma^2
-    logic        [47:0] sqrt_rem;      // reszta isqrt
-    logic        [23:0] sqrt_res;      // wynik isqrt
-    logic        [47:0] sqrt_bit;      // biezacy bit isqrt
-    logic [5:0]         sqrt_iter;     // licznik iteracji (0..23)
+    logic signed [95:0] var_num;       // N*sumsq - suma^2
+    logic        [95:0] suma_sq;       // suma^2 (osobny cykl)
+    logic        [95:0] n_sumsq;       // N*sumsq (osobny cykl)
+    logic        [95:0] sqrt_rem;      // reszta isqrt
+    logic        [95:0] sqrt_res;      // wynik isqrt (96b dla spojnosci z bit)
+    logic        [95:0] sqrt_bit;      // biezacy bit isqrt
+    logic [6:0]         sqrt_iter;     // licznik iteracji (0..47)
+    logic signed [63:0] mfcc_ext;      // s_tdata rozszerzone do 64b (do kwadratu)
+    logic signed [63:0] sum_ext;       // sum_acc rozszerzone do 64b
 
     integer i;
 
@@ -91,12 +95,12 @@ module feature_aggregator (
                     m_tlast  <= 1'b0;
                     if (s_tvalid && s_tready) begin
                         sum_acc[coeff_idx]   <= sum_acc[coeff_idx]   + s_tdata;
-                        sumsq_acc[coeff_idx] <= sumsq_acc[coeff_idx] + s_tdata*s_tdata;
+                        sumsq_acc[coeff_idx] <= sumsq_acc[coeff_idx] + (64'(signed'(s_tdata)) * 64'(signed'(s_tdata)));
                         if (s_tlast) begin
                             coeff_idx <= '0;
                             if (s_tuser == N_FRAMES-1) begin
                                 calc_k <= '0;
-                                state  <= S_VARNUM;
+                                state  <= S_SQ;
                             end
                         end else begin
                             coeff_idx <= coeff_idx + 1;
@@ -104,33 +108,44 @@ module feature_aggregator (
                     end
                 end
 
-                // ---- C1: policz var_num i przygotuj isqrt ----
-                S_VARNUM: begin
-                    var_num <= $signed({16'b0, sumsq_acc[calc_k]}) * N
-                             - $signed(sum_acc[calc_k]) * $signed(sum_acc[calc_k]);
-                    // init isqrt
+                // ---- C1a: suma^2 (jeden mnoznik) ----
+                S_SQ: begin
+                    suma_sq <= 96'(signed'(sum_acc[calc_k])) * 96'(signed'(sum_acc[calc_k]));
+                    state   <= S_MUL;
+                end
+
+                // ---- C1b: N*sumsq (drugi mnoznik) ----
+                S_MUL: begin
+                    n_sumsq <= 96'(sumsq_acc[calc_k]) * 96'(N);
+                    state   <= S_SUB;
+                end
+
+                // ---- C1c: var_num = N*sumsq - suma^2, init isqrt ----
+                S_SUB: begin
+                    var_num   <= $signed(n_sumsq) - $signed(suma_sq);
                     sqrt_res  <= '0;
-                    sqrt_bit  <= 48'h1 << 46;   // najwyzszy parzysty bit
+                    sqrt_bit  <= 96'h1 << 94;
                     sqrt_iter <= '0;
-                    state     <= S_SQRT;
+                    state     <= S_SQRTINIT;
+                end
+
+                // ---- init isqrt: ustaw sqrt_rem z gotowego var_num ----
+                S_SQRTINIT: begin
+                    sqrt_rem <= (var_num < 0) ? 96'd0 : var_num[95:0];
+                    state    <= S_SQRT;
                 end
 
                 // ---- C2..: isqrt, 1 iteracja na cykl (24 cykle) ----
                 S_SQRT: begin
-                    if (sqrt_iter == 0) begin
-                        // pierwsza iteracja: ustaw rem = max(var_num,0)
-                        sqrt_rem <= (var_num < 0) ? 48'd0 : var_num[47:0];
-                    end
-                    // jedna iteracja restoring sqrt
                     if (sqrt_rem >= sqrt_res + sqrt_bit) begin
                         sqrt_rem <= sqrt_rem - (sqrt_res + sqrt_bit);
-                        sqrt_res <= (sqrt_res >> 1) + sqrt_bit[23:0];
+                        sqrt_res <= (sqrt_res >> 1) + sqrt_bit;
                     end else begin
                         sqrt_res <= sqrt_res >> 1;
                     end
                     sqrt_bit <= sqrt_bit >> 2;
 
-                    if (sqrt_iter == 23)
+                    if (sqrt_iter == 47)
                         state <= S_DIV;
                     else
                         sqrt_iter <= sqrt_iter + 1;
@@ -139,7 +154,7 @@ module feature_aggregator (
                 // ---- dzielenia /N (osobny cykl) ----
                 S_DIV: begin
                     feat_mem[calc_k]         <= ($signed(sum_acc[calc_k]) / N) >>> Q10;
-                    feat_mem[N_MFCC+calc_k]  <= ($signed({1'b0, sqrt_res}) / N) >>> Q10;
+                    feat_mem[N_MFCC+calc_k]  <= ($signed({1'b0, sqrt_res[46:0]}) / N) >>> Q10;
                     state <= S_NEXTK;
                 end
 
@@ -150,21 +165,22 @@ module feature_aggregator (
                         state   <= S_EMIT;
                     end else begin
                         calc_k <= calc_k + 1;
-                        state  <= S_VARNUM;
+                        state  <= S_SQ;
                     end
                 end
 
                 // ---- emisja 26 cech ----
+                // m_tvalid trzymane caly czas; out_idx inkrementuje gdy m_tready.
+                // Po odebraniu ostatniej (out_idx==25 && m_tready) -> S_DONE.
                 S_EMIT: begin
-                    m_tdata  <= feat_mem[out_idx];
                     m_tvalid <= 1'b1;
+                    m_tdata  <= feat_mem[out_idx];
                     m_tuser  <= out_idx;
                     m_tlast  <= (out_idx == N_FEATURES-1);
                     if (m_tready) begin
                         if (out_idx == N_FEATURES-1) begin
-                            m_tvalid <= 1'b0;
-                            m_tlast  <= 1'b0;
-                            state    <= S_DONE;
+                            // ostatnia cecha wlasnie odebrana
+                            state <= S_DONE;
                         end else begin
                             out_idx <= out_idx + 1;
                         end
