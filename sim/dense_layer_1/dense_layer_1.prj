@@ -1,3 +1,0 @@
-sv work ../../rtl/neural_network_optim/nn_parameters.sv \
-        ../../rtl/neural_network_optim/dense_layer_1.sv \
-        dense_layer_1_tb.sv

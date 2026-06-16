@@ -1,3 +1,0 @@
-sv work   i2c_master_tb.sv
-
-vhdl work   ../../rtl/adc/i2c_master.vhd
