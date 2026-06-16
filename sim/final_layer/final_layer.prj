@@ -1,3 +1,0 @@
-sv work ../../rtl/neural_network_optim/nn_parameters.sv \
-        ../../rtl/neural_network_optim/final_layer.sv \
-        final_layer_tb.sv
