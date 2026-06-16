@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Jun 16 03:13:21 2026
+# Process ID: 3380
+# Current directory: C:/Users/Python/Desktop/sdup/simple_speech_recognition/project_do_spakowania
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15652 C:\Users\Python\Desktop\sdup\simple_speech_recognition\project_do_spakowania\project_do_spakowania.xpr
+# Log file: C:/Users/Python/Desktop/sdup/simple_speech_recognition/project_do_spakowania/vivado.log
+# Journal file: C:/Users/Python/Desktop/sdup/simple_speech_recognition/project_do_spakowania\vivado.jou
+# Running On: DESKTOP-UQJIKI5, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 6287 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Python/Desktop/sdup/simple_speech_recognition/project_do_spakowania/project_do_spakowania.xpr
