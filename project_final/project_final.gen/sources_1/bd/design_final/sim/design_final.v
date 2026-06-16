@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Tue Jun 16 03:30:39 2026
+//Date        : Tue Jun 16 08:11:25 2026
 //Host        : DESKTOP-UQJIKI5 running 64-bit major release  (build 9200)
 //Command     : generate_target design_final.bd
 //Design      : design_final
@@ -33,7 +33,7 @@ module design_final
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    gpio_sw_tri_i,
+    gpio_but_tri_i,
     led0_0);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
@@ -56,10 +56,10 @@ module design_final
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_sw TRI_I" *) input [1:0]gpio_sw_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_but " *) input [4:0]gpio_but_tri_i;
   output led0_0;
 
-  wire [1:0]axi_gpio_0_GPIO_TRI_I;
+  wire [4:0]axi_gpio_0_GPIO_TRI_I;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -160,7 +160,7 @@ module design_final
   wire [0:0]rst_ps7_0_50M_peripheral_aresetn;
   wire top_ssr_0_led0;
 
-  assign axi_gpio_0_GPIO_TRI_I = gpio_sw_tri_i[1:0];
+  assign axi_gpio_0_GPIO_TRI_I = gpio_but_tri_i[4:0];
   assign led0_0 = top_ssr_0_led0;
   design_final_axi_gpio_0_0 axi_gpio_0
        (.gpio_io_i(axi_gpio_0_GPIO_TRI_I),

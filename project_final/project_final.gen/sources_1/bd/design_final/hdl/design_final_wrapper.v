@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Tue Jun 16 03:30:39 2026
+//Date        : Tue Jun 16 08:11:25 2026
 //Host        : DESKTOP-UQJIKI5 running 64-bit major release  (build 9200)
 //Command     : generate_target design_final_wrapper.bd
 //Design      : design_final_wrapper
@@ -32,7 +32,7 @@ module design_final_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    gpio_sw_tri_i,
+    gpio_but_tri_i,
     led0_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -55,7 +55,7 @@ module design_final_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input [1:0]gpio_sw_tri_i;
+  input [4:0]gpio_but_tri_i;
   output led0_0;
 
   wire [14:0]DDR_addr;
@@ -79,7 +79,7 @@ module design_final_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [1:0]gpio_sw_tri_i;
+  wire [4:0]gpio_but_tri_i;
   wire led0_0;
 
   design_final design_final_i
@@ -104,6 +104,6 @@ module design_final_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .gpio_sw_tri_i(gpio_sw_tri_i),
+        .gpio_but_tri_i(gpio_but_tri_i),
         .led0_0(led0_0));
 endmodule
