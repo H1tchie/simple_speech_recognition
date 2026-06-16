@@ -1,0 +1,30 @@
+sv work ../../rtl/audio_processing_opt/ap_parameters.sv \
+    ../../rtl/audio_processing_opt/framing_axi.sv \
+    ../../rtl/audio_processing_opt/windowing.sv \
+    ../../rtl/audio_processing_opt/unwrapper.sv \
+    ../../rtl/audio_processing_opt/zero_padding.sv \
+    ../../rtl/audio_processing_opt/mel_filter/mel_filter_bank.sv \
+    ../../rtl/audio_processing_opt/mel_filter/reshape_output.sv \
+    ../../rtl/audio_processing_opt/mel_filter/dB_LUT.sv \
+    ../../rtl/audio_processing_opt/mel_filter/multiplier.sv \
+    ../../rtl/audio_processing_opt/magnitude.sv \
+    ../../rtl/audio_processing_opt/mean_std.sv \
+    ../../rtl/audio_processing_opt/fifo.sv \
+    ../../rtl/audio_processing_opt/convert_to_signed.sv \
+    ../../rtl/audio_processing_opt/top_ap_axi.sv \
+    ../../rtl/neural_network_optim/nn_parameters.sv \
+    ../../rtl/neural_network_optim/dense_layer_1.sv \
+    ../../rtl/neural_network_optim/dense_layer_2.sv \
+    ../../rtl/neural_network_optim/final_layer.sv \
+    ../../rtl/neural_network_optim/top_nn.sv \
+    ../../rtl/led_logic/led_logic.sv \
+    ../../rtl/ssr_axi/ssr_core.sv \
+    ../../rtl/ssr_axi/ssr_axi_lite_v1_0_S00_AXI.sv \
+    ../../rtl/ssr_axi/ssr_axi_lite_v1_0.sv \
+        ssr_axi_lite_tb.sv
+verilog work ../../rtl/audio_processing_opt/fft/Butterfly.v \
+        ../../rtl/audio_processing_opt/fft/DelayBuffer.v \
+        ../../rtl/audio_processing_opt/fft/FFT64.v \
+        ../../rtl/audio_processing_opt/fft/Multiply.v \
+        ../../rtl/audio_processing_opt/fft/SdfUnit.v \
+        ../../rtl/audio_processing_opt/fft/Twiddle64.v

@@ -1,0 +1,9 @@
+sv work FFT64_tb.sv
+
+verilog work ../../../rtl/audio_processing/fft/Butterfly.v \
+        ../../../rtl/audio_processing/fft/DelayBuffer.v \
+        ../../../rtl/audio_processing/fft/FFT64.v \
+        ../../../rtl/audio_processing/fft/Multiply.v \
+        ../../../rtl/audio_processing/fft/SdfUnit.v \
+        ../../../rtl/audio_processing/fft/Twiddle64.v 
+        
