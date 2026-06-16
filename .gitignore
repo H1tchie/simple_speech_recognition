@@ -44,3 +44,4 @@ xrun.log
 .nfs*
 *.tcl
 build_core
+bd
