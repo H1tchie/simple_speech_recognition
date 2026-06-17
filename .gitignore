@@ -43,5 +43,3 @@ xrun.log
 .DS_Store
 .nfs*
 *.tcl
-build_core
-bd

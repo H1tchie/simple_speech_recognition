@@ -58,7 +58,7 @@ module top_system_tb;
     // -----------------------------------------------------------------------
     task automatic run_audio(input string mem_file, input string label);
         // Wczytaj probki
-        $readmemh("C:/Users/ferdz/Desktop/SDUP/sim/python/generated_files/samples_on.mem",  samples);
+        $readmemh("samples_on_good.mem",  samples);
 
         // Reset calego systemu
         rst = 1'b1;

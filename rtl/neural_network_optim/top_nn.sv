@@ -59,5 +59,6 @@ end
         .input_vector(dslayer2_output),
         .output_value(output_value)
     );
-
+assign done1_out = done1;
+assign done2_out = done2;
 endmodule
