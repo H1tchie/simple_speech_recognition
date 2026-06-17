@@ -1,0 +1,16 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Jun 17 01:51:24 2026
+| Host         : DESKTOP-UQJIKI5 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zedboard_pnyq_ssr_top_ssr_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of zedboard_pnyq_ssr_top_ssr_0_1 (xilinx.com:user:top_ssr:1.0 (Rev. 1)) to Vivado generation flows.
+

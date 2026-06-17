@@ -58,7 +58,7 @@ module framing (
 
     integer i;
 
-    assign s_tready = (state == S_FILL);
+    assign s_tready = (state == S_FILL) || (state == S_DONE);
 
     always_ff @(posedge clk) begin
         if (rst) begin

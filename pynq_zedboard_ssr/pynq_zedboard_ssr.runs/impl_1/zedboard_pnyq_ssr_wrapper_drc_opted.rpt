@@ -1,0 +1,1374 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Jun 17 01:59:13 2026
+| Host         : DESKTOP-UQJIKI5 running 64-bit major release  (build 9200)
+| Command      : report_drc -file zedboard_pnyq_ssr_wrapper_drc_opted.rpt -pb zedboard_pnyq_ssr_wrapper_drc_opted.pb -rpx zedboard_pnyq_ssr_wrapper_drc_opted.rpx
+| Design       : zedboard_pnyq_ssr_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 267
++----------+----------+------------------------+------------+
+| Rule     | Severity | Description            | Violations |
++----------+----------+------------------------+------------+
+| DPIP-1   | Warning  | Input pipelining       | 112        |
+| DPOP-1   | Warning  | PREG Output pipelining | 73         |
+| DPOP-2   | Warning  | MREG Output pipelining | 81         |
+| REQP-181 | Advisory | writefirst             | 1          |
++----------+----------+------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out__0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out__0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out__0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out__0/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#7 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out__1 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#8 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out__1 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#9 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out__1 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/p_1_out__1/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#10 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#11 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#12 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__1 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#13 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__10 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__10/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#14 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__11 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__11/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#15 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__12 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__12/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#16 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__2 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#17 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__3 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#18 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__4 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#19 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__5 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#20 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__6 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#21 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__7 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#22 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__8 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#23 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__9 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__9/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#24 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#25 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg__0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#26 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg__1 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#27 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg__3 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#28 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#29 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#30 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0__0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#31 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0__0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#32 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq_reg__0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq_reg__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#33 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq_reg__0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq_reg__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#34 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq_reg__2 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq_reg__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#35 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq_reg__2 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq_reg__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#36 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dct/acc0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dct/acc0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#37 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dct/acc0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dct/acc0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#38 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_im0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_im0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#39 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_im0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_im0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#40 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_re0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_re0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#41 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_re0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_re0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#42 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#43 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#44 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#45 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#46 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__1 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#47 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__1 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#48 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_window/product input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_window/product/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#49 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#50 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__0 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#51 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__10 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__10/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#52 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__10 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#53 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__11 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__11/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#54 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__11 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__11/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#55 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__13 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__13/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#56 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__13 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__13/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#57 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__14 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__14/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#58 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__14 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__14/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#59 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__16 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__16/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#60 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__16 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__16/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#61 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__17 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__17/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#62 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__17 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__17/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#63 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__18 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__18/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#64 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__18 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__18/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#65 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__19 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__19/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#66 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__19 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__19/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#67 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__2 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#68 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__2 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#69 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__21 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__21/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#70 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__21 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__21/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#71 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__23 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__23/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#72 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__23 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__23/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#73 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__24 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__24/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#74 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__24 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__24/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#75 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__26 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__26/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#76 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__26 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__26/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#77 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__28 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__28/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#78 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__28 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__28/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#79 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__29 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__29/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#80 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__29 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__29/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#81 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__3 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#82 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__3 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#83 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__30 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__30/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#84 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__30 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__30/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#85 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__31 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__31/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#86 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__31 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__31/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#87 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__33 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__33/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#88 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__33 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__33/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#89 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__35 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__35/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#90 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__35 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__35/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#91 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__37 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__37/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#92 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__37 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__37/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#93 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__38 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__38/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#94 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__38 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__38/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#95 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__4 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#96 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__4 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#97 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__40 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__40/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#98 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__40 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__40/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#99 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__42 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__42/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#100 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__42 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__42/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#101 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__43 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__43/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#102 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__43 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__43/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#103 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__44 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__44/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#104 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__44 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__44/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#105 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__5 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#106 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__5 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#107 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__6 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#108 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__6 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#109 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__7 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#110 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__7 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#111 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__9 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__9/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#112 Warning
+Input pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__9 input zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__9/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__10 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__10/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__12 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__12/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#3 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__2 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#4 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__5 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#5 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__8 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#6 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/p_1_out output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/p_1_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#7 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/p_1_out__0 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/p_1_out__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#8 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#9 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0__0 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#10 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dct/acc0 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dct/acc0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#11 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_im0 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_im0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#12 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_re0 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_re0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#13 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#14 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__0 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#15 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__1 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#16 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/rom_addr output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/rom_addr/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#17 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#18 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq__0 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#19 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq__1 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#20 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq__2 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#21 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#22 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq__0 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#23 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq__1 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#24 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq__2 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#25 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#26 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__0 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#27 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__1 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#28 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__10 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__10/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#29 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__11 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__11/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#30 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__12 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__12/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#31 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__13 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__13/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#32 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__14 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__14/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#33 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__15 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__15/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#34 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__16 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__16/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#35 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__17 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__17/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#36 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__18 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__18/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#37 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__19 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__19/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#38 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__2 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#39 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__20 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__20/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#40 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__21 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__21/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#41 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__22 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__22/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#42 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__23 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__23/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#43 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__24 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__24/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#44 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__25 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__25/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#45 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__26 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__26/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#46 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__27 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__27/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#47 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__28 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__28/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#48 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__29 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__29/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#49 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__3 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#50 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__30 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__30/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#51 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__31 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__31/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#52 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__32 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__32/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#53 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__33 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__33/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#54 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__34 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__34/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#55 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__35 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__35/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#56 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__36 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__36/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#57 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__37 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__37/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#58 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__38 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__38/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#59 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__39 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__39/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#60 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__4 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#61 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__40 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__40/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#62 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__41 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__41/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#63 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__42 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__42/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#64 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__43 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__43/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#65 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__44 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__44/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#66 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__5 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#67 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__6 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#68 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__7 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#69 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__8 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#70 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__9 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#71 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_1_out output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_1_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#72 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_1_out__0 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_1_out__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#73 Warning
+PREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_1_out__1 output zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_1_out__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__10 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__10/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#3 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__12 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__12/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#4 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__2 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#5 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__5 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#6 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__8 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq0__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#7 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#8 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg__0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#9 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg__1 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#10 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg__3 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/n_sumsq_reg__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#11 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/p_1_out multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/p_1_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#12 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/p_1_out__0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/p_1_out__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#13 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#14 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0__0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq0__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#15 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq_reg__0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#16 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq_reg__2 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_agg/suma_sq_reg__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#17 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dct/acc0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dct/acc0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#18 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_im0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_im0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#19 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_re0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_dft/acc_re0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#20 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#21 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#22 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__1 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/prod__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#23 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/rom_addr multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_mel/rom_addr/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#24 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#25 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq__0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#26 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq__1 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#27 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq__2 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/im_sq__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#28 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#29 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq__0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#30 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq__1 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#31 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq__2 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_power/re_sq__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#32 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_window/product multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_dsp_chain/u_window/product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#33 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#34 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#35 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__1 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#36 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__10 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__10/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#37 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__11 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__11/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#38 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__12 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__12/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#39 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__13 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__13/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#40 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__14 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__14/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#41 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__15 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__15/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#42 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__16 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__16/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#43 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__17 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__17/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#44 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__18 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__18/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#45 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__19 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__19/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#46 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__2 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#47 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__20 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__20/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#48 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__21 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__21/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#49 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__22 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__22/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#50 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__23 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__23/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#51 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__24 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__24/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#52 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__25 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__25/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#53 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__26 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__26/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#54 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__27 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__27/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#55 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__28 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__28/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#56 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__29 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__29/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#57 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__3 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#58 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__30 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__30/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#59 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__31 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__31/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#60 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__32 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__32/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#61 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__33 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__33/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#62 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__34 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__34/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#63 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__35 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__35/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#64 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__36 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__36/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#65 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__37 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__37/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#66 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__38 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__38/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#67 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__39 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__39/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#68 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__4 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#69 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__40 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__40/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#70 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__41 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__41/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#71 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__42 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__42/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#72 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__43 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__43/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#73 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__44 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__44/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#74 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__5 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#75 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__6 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#76 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__7 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#77 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__8 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#78 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__9 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_0_out__9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#79 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_1_out multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_1_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#80 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_1_out__0 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_1_out__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#81 Warning
+MREG Output pipelining  
+DSP zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_1_out__1 multiplier stage zedboard_pnyq_ssr_i/top_ssr_0/inst/u_top_system/u_top_nn/u_dense_layer_1/p_1_out__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+REQP-181#1 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (zedboard_pnyq_ssr_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+

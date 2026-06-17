@@ -1,26 +1,24 @@
 //////////////////////////////////////////////////////////////////////////////
 /*
- Module name:   top_microblaze
- Authors:       Kacper Ferdek, Mateusz Gibas
- Description:   Opakowanie AXI4-Lite (slave) dla top_system. Pozwala procesorowi
-                MicroBlaze (lub ARM na Zynq) sterowac calym rozpoznawaniem mowy:
-                  - wpisywac probki audio (Q1.15) -> wrapper podaje je na
-                    wejscie AXI-Stream top_system (s_tdata/valid/last),
-                  - oznaczyc ostatnia probke (po N_SAMPLES) jako s_tlast,
-                  - odczytac wynik klasyfikacji (output_value) i status.
+ Module name:   top_ssr
+ Authors:       Mateusz Gibas, Kacper Ferdek
+ Version:       2.0 (AXI DMA)
+ Description:   Opakowanie rdzenia rozpoznawania mowy (top_system) pod przeplyw
+                z AXI DMA + PYNQ.
 
-                Probki podajemy pojedynczo: kazdy zapis do rejestru SAMPLE
-                wpycha jeden beat na strumien. Przed kolejnym zapisem procesor
-                sprawdza STATUS.ready (czy poprzedni beat zostal odebrany).
+                - WEJSCIE AUDIO: AXI4-Stream slave (s_axis_*), podpinane wprost
+                  do portu M_AXIS_MM2S kontrolera AXI DMA. Probki Q1.15 16-bit.
+                  Sygnal s_axis_tlast generuje DMA na koncu transferu, wiec nie
+                  ma juz rejestru N_SAMPLES ani licznika probek.
+                - WYNIK / STEROWANIE: maly slave AXI4-Lite (s00_axi_*), czytany
+                  z Pythona przez MMIO:
+                      0x00 CTRL   (W): bit0 soft_reset
+                      0x04 STATUS (R): bit0 output_valid, bit1 busy, bit2 s_axis_ready
+                      0x08 RESULT (R): [1:0] wynik (0=other, 1=on, 2=off)
+                - led0: dioda (on -> zapal, off -> zgas).
 
-   MAPA REJESTROW (offset wzgledem bazy peryferium):
-     0x00 CTRL      (W) : bit0 soft_reset (impuls; resetuje caly top_system)
-     0x04 N_SAMPLES (W) : liczba probek nagrania (do wygenerowania s_tlast)
-     0x08 SAMPLE    (W) : [15:0] probka Q1.15; kazdy zapis = jeden beat strumienia
-     0x0C STATUS    (R) : bit0 ready (mozna wyslac kolejna probke),
-                          bit1 output_valid (wynik gotowy),
-                          bit2 busy (trwa przetwarzanie)
-     0x10 RESULT    (R) : [1:0] wynik (0=other, 1=on, 2=off)
+                Caly modul pracuje w jednej domenie zegara s00_axi_aclk
+                (ten sam zegar taktuje strumien, AXI-Lite i rdzen).
  */
 //////////////////////////////////////////////////////////////////////////////
 `timescale 1 ns / 1 ps
@@ -28,13 +26,20 @@
 module top_ssr #
 (
     parameter integer C_S00_AXI_DATA_WIDTH = 32,
-    parameter integer C_S00_AXI_ADDR_WIDTH = 5      // 8 rejestrow (3 bity wyboru)
+    parameter integer C_S00_AXI_ADDR_WIDTH = 4,
+    parameter integer C_S_AXIS_DATA_WIDTH  = 16
 )
 (
-    // funkcjonalne wyjscie (dioda sterowana wynikiem)
+    // ---- AXI4-Stream slave: audio z AXI DMA (M_AXIS_MM2S) ----
+    input  wire [C_S_AXIS_DATA_WIDTH-1:0] s_axis_tdata,
+    input  wire                           s_axis_tvalid,
+    output wire                           s_axis_tready,
+    input  wire                           s_axis_tlast,
+
+    // ---- dioda ----
     output wire        led0,
 
-    // interfejs AXI4-Lite (slave) - kompatybilny z MicroBlaze
+    // ---- AXI4-Lite slave: sterowanie / status / wynik ----
     input  wire        s00_axi_aclk,
     input  wire        s00_axi_aresetn,
     input  wire [C_S00_AXI_ADDR_WIDTH-1:0] s00_axi_awaddr,
@@ -59,7 +64,7 @@ module top_ssr #
 );
 
     localparam integer ADDR_LSB          = (C_S00_AXI_DATA_WIDTH/32) + 1; // =2
-    localparam integer OPT_MEM_ADDR_BITS = 2;                            // 8 rejestrow
+    localparam integer OPT_MEM_ADDR_BITS = 1;                            // 4 rejestry
 
     // ---- standardowe rejestry AXI4-Lite ----
     reg [C_S00_AXI_ADDR_WIDTH-1:0] axi_awaddr;
@@ -80,29 +85,21 @@ module top_ssr #
     assign s00_axi_wready  = axi_wready;
     assign s00_axi_bresp   = axi_bresp;
     assign s00_axi_bvalid  = axi_bvalid;
-    assign s00_axi_arready  = axi_arready;
+    assign s00_axi_arready = axi_arready;
     assign s00_axi_rdata   = axi_rdata;
     assign s00_axi_rresp   = axi_rresp;
     assign s00_axi_rvalid  = axi_rvalid;
 
-    // ---- sygnaly do/z top_system ----
-    reg  signed [15:0] str_data;     // dane na strumien
-    reg                str_valid;    // s_tvalid
-    wire               str_ready;    // s_tready (z top_system)
-    reg  [31:0]        n_samples;    // liczba probek nagrania
-    reg  [31:0]        sample_cnt;   // licznik wyslanych probek
-    wire               str_last;
-    wire [1:0]         core_value;
-    wire               core_ovalid;
-    wire               core_busy;
+    // ---- sygnaly rdzenia ----
+    wire [1:0] core_value;
+    wire       core_ovalid;
+    wire       core_busy;
+    wire       core_sready;
 
-    // strobiki sterujace
-    reg                soft_reset_req;
-    reg  [3:0]         rst_cnt;
-    wire               core_rst = (~s00_axi_aresetn) | (rst_cnt != 4'd0);
-
-    assign str_last  = str_valid && (sample_cnt == (n_samples - 32'd1));
-    wire   ready_for_sample = ~str_valid;   // mozna przyjac kolejna probke, gdy nie trzymamy biezacej
+    // ---- soft reset (rozciagniety) ----
+    reg        soft_reset_req;
+    reg [3:0]  rst_cnt;
+    wire       core_rst = (~s00_axi_aresetn) | (rst_cnt != 4'd0);
 
     //--------------------------------------------------------------------------
     // Write address / data channel
@@ -130,53 +127,22 @@ module top_ssr #
     assign slv_reg_wren = axi_wready && s00_axi_wvalid && axi_awready && s00_axi_awvalid;
 
     //--------------------------------------------------------------------------
-    // Dekodowanie zapisow + sterowanie strumieniem
+    // Dekodowanie zapisow (CTRL) + soft reset
     //--------------------------------------------------------------------------
     always @(posedge s00_axi_aclk) begin
         if (~s00_axi_aresetn) begin
             soft_reset_req <= 1'b0;
-            n_samples      <= 32'd16000;   // domyslnie dlugosc nagrania
-            str_data       <= 16'sd0;
-            str_valid      <= 1'b0;
-            sample_cnt     <= 32'd0;
             rst_cnt        <= 4'd0;
         end else begin
             soft_reset_req <= 1'b0;   // impuls 1-taktowy
-
-            // zapisy do rejestrow
             if (slv_reg_wren) begin
                 case (axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB])
-                    3'h0: begin // CTRL
-                        if (s00_axi_wstrb[0]) soft_reset_req <= s00_axi_wdata[0];
-                    end
-                    3'h1: begin // N_SAMPLES
-                        n_samples <= s00_axi_wdata;
-                    end
-                    3'h2: begin // SAMPLE -> wpchnij beat (tylko gdy gotowi)
-                        if (ready_for_sample) begin
-                            str_data  <= s00_axi_wdata[15:0];
-                            str_valid <= 1'b1;
-                        end
-                    end
+                    2'h0: if (s00_axi_wstrb[0]) soft_reset_req <= s00_axi_wdata[0]; // CTRL
                     default: ;
                 endcase
             end
-
-            // obsluga handshake strumienia: gdy beat odebrany, zwolnij i licz
-            if (str_valid && str_ready) begin
-                str_valid <= 1'b0;
-                if (str_last) sample_cnt <= 32'd0;       // koniec nagrania -> licznik od nowa
-                else          sample_cnt <= sample_cnt + 32'd1;
-            end
-
-            // rozciagniety soft reset rdzenia (i wyzerowanie licznika probek)
-            if (soft_reset_req) begin
-                rst_cnt    <= 4'd15;
-                sample_cnt <= 32'd0;
-                str_valid  <= 1'b0;
-            end else if (rst_cnt != 4'd0) begin
-                rst_cnt <= rst_cnt - 4'd1;
-            end
+            if (soft_reset_req)        rst_cnt <= 4'd15;
+            else if (rst_cnt != 4'd0)  rst_cnt <= rst_cnt - 4'd1;
         end
     end
 
@@ -219,8 +185,8 @@ module top_ssr #
     reg [C_S00_AXI_DATA_WIDTH-1:0] rdata_mux;
     always @(*) begin
         case (axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB])
-            3'h3:    rdata_mux = {29'b0, core_busy, core_ovalid, ready_for_sample}; // STATUS
-            3'h4:    rdata_mux = {30'b0, core_value};                              // RESULT
+            2'h1:    rdata_mux = {29'b0, core_sready, core_busy, core_ovalid}; // STATUS
+            2'h2:    rdata_mux = {30'b0, core_value};                          // RESULT
             default: rdata_mux = 32'h0;
         endcase
     end
@@ -243,15 +209,17 @@ module top_ssr #
     assign led0 = led0_r;
 
     //--------------------------------------------------------------------------
-    // Instancja rdzenia rozpoznawania
+    // Rdzen rozpoznawania - strumien audio wprost z AXI DMA
     //--------------------------------------------------------------------------
+    assign s_axis_tready = core_sready;
+
     top_system u_top_system (
         .clk          (s00_axi_aclk),
         .rst          (core_rst),
-        .s_tdata      (str_data),
-        .s_tvalid     (str_valid),
-        .s_tready     (str_ready),
-        .s_tlast      (str_last),
+        .s_tdata      (s_axis_tdata),
+        .s_tvalid     (s_axis_tvalid),
+        .s_tready     (core_sready),
+        .s_tlast      (s_axis_tlast),
         .output_value (core_value),
         .output_valid (core_ovalid),
         .busy         (core_busy)
