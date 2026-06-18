@@ -1,0 +1,136 @@
+<svg viewBox="0 0 1060 620" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="aLite" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#1565C0"/></marker>
+    <marker id="aStream" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#E65100"/></marker>
+    <marker id="aMem" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#555"/></marker>
+    <style>
+      .box{rx:10;ry:10;stroke-width:1.6}
+      .t{font-size:14px;font-weight:600;fill:#1a1a1a}
+      .s{font-size:11px;fill:#444}
+      .port{font-size:10px;fill:#666;font-style:italic}
+      .lbl{font-size:11px;font-weight:600}
+      .chip{fill:#ffffff;stroke:#9aa3ad;stroke-width:1;rx:6;ry:6}
+      .chipt{font-size:10.5px;fill:#333;text-anchor:middle}
+    </style>
+  </defs>
+
+  <text x="530" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#111">SSR — dataflow on ZedBoard (Zynq-7000 + PYNQ)</text>
+
+  <!-- ===================== PS ===================== -->
+  <rect class="box" x="40" y="90" width="190" height="120" fill="#E3F2FD" stroke="#1565C0"/>
+  <text class="t" x="135" y="120" text-anchor="middle">ZYNQ7 PS</text>
+  <text class="s" x="135" y="140" text-anchor="middle">ARM Cortex-A9</text>
+  <text class="s" x="135" y="157" text-anchor="middle">running PYNQ</text>
+  <text class="s" x="135" y="174" text-anchor="middle">(Linux + Python)</text>
+  <text class="port" x="135" y="196" text-anchor="middle">M_AXI_GP0 · S_AXI_HP0</text>
+
+  <!-- DDR -->
+  <rect class="box" x="40" y="470" width="190" height="80" fill="#F3E5F5" stroke="#7B1FA2"/>
+  <text class="t" x="135" y="500" text-anchor="middle">DDR memory</text>
+  <text class="s" x="135" y="520" text-anchor="middle">audio buffer</text>
+  <text class="s" x="135" y="537" text-anchor="middle">(16000 × int16, Q1.15)</text>
+
+  <!-- ===================== Interconnect ===================== -->
+  <rect class="box" x="300" y="95" width="120" height="110" fill="#ECEFF1" stroke="#546E7A"/>
+  <text class="t" x="360" y="140" text-anchor="middle" font-size="12.5">AXI</text>
+  <text class="t" x="360" y="158" text-anchor="middle" font-size="12.5">Interconnect</text>
+  <text class="s" x="360" y="176" text-anchor="middle">/ SmartConnect</text>
+
+  <!-- AXI DMA -->
+  <rect class="box" x="300" y="450" width="120" height="110" fill="#E1F5FE" stroke="#0277BD"/>
+  <text class="t" x="360" y="490" text-anchor="middle">AXI DMA</text>
+  <text class="s" x="360" y="510" text-anchor="middle">MM2S</text>
+  <text class="port" x="360" y="528" text-anchor="middle">M_AXI_MM2S</text>
+  <text class="port" x="360" y="544" text-anchor="middle">M_AXIS_MM2S</text>
+
+  <!-- ===================== top_ssr ===================== -->
+  <rect class="box" x="500" y="80" width="510" height="480" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+  <text class="t" x="755" y="106" text-anchor="middle" font-size="15">top_ssr  (our IP)</text>
+  <text class="port" x="515" y="150" >s_axis ▸</text>
+  <text class="port" x="515" y="470" >s00_axi ▸</text>
+
+  <!-- top_system inner box -->
+  <rect class="box" x="540" y="160" width="440" height="300" fill="#ffffff" stroke="#66975c" stroke-dasharray="4 3"/>
+  <text class="s" x="560" y="180" font-weight="600" fill="#2E7D32">top_system</text>
+
+  <!-- dsp_chain -->
+  <rect x="555" y="195" width="410" height="92" fill="#FFF8E1" stroke="#F9A825" rx="8"/>
+  <text x="760" y="214" text-anchor="middle" font-size="12" font-weight="700" fill="#8d6e00">dsp_chain  —  MFCC front-end (AXI4-Stream)</text>
+  <!-- chips -->
+  <g>
+    <rect class="chip" x="565" y="228" width="58" height="40"/><text class="chipt" x="594" y="244">fram-</text><text class="chipt" x="594" y="257">ing</text>
+    <rect class="chip" x="628" y="228" width="58" height="40"/><text class="chipt" x="657" y="251">window</text>
+    <rect class="chip" x="691" y="228" width="50" height="40"/><text class="chipt" x="716" y="251">DFT</text>
+    <rect class="chip" x="746" y="228" width="54" height="40"/><text class="chipt" x="773" y="251">power</text>
+    <rect class="chip" x="805" y="228" width="46" height="40"/><text class="chipt" x="828" y="251">mel</text>
+    <rect class="chip" x="856" y="228" width="44" height="40"/><text class="chipt" x="878" y="251">log</text>
+    <rect class="chip" x="905" y="228" width="50" height="40"/><text class="chipt" x="930" y="251">DCT</text>
+  </g>
+  <text class="s" x="760" y="302" text-anchor="middle" font-style="italic">→ aggregator: 26 features (13 mean + 13 std)</text>
+
+  <!-- feature_buffer -->
+  <rect class="box" x="560" y="320" width="160" height="56" fill="#E0F2F1" stroke="#00897B"/>
+  <text class="chipt" x="640" y="344" font-weight="600">feature_buffer</text>
+  <text class="chipt" x="640" y="361">(collect 26 → FSM)</text>
+
+  <!-- top_nn -->
+  <rect class="box" x="760" y="320" width="200" height="56" fill="#EDE7F6" stroke="#5E35B1"/>
+  <text class="chipt" x="860" y="340" font-weight="600">top_nn</text>
+  <text class="chipt" x="860" y="356">dense1→dense2→final</text>
+  <text class="chipt" x="860" y="370" font-size="9.5" fill="#666">→ done2 / output_valid</text>
+
+  <!-- RESULT -->
+  <rect class="box" x="620" y="400" width="240" height="44" fill="#FBE9E7" stroke="#D84315"/>
+  <text class="chipt" x="740" y="426" font-weight="600">RESULT  [1:0]  (0=other,1=on,2=off)</text>
+
+  <!-- led0 external -->
+  <rect class="box" x="1018" y="250" width="36" height="40" fill="#FFFDE7" stroke="#F9A825"/>
+  <text x="1036" y="236" text-anchor="middle" font-size="10" fill="#666">LED0</text>
+  <text x="1036" y="275" text-anchor="middle" font-size="16">💡</text>
+
+  <!-- ============ arrows ============ -->
+  <!-- PS -> Interconnect (AXI-Lite) -->
+  <path d="M230,135 L298,135" fill="none" stroke="#1565C0" stroke-width="2" marker-end="url(#aLite)"/>
+  <text class="lbl" x="264" y="127" text-anchor="middle" fill="#1565C0" font-size="9.5">GP0</text>
+  <!-- Interconnect -> DMA lite -->
+  <path d="M360,205 L360,448" fill="none" stroke="#1565C0" stroke-width="2" marker-end="url(#aLite)"/>
+  <text class="lbl" x="378" y="330" fill="#1565C0" font-size="9.5">S_AXI_LITE</text>
+  <!-- Interconnect -> top_ssr s00_axi (control/result) -->
+  <path d="M420,150 L470,150 L470,465 L513,465" fill="none" stroke="#1565C0" stroke-width="2" marker-end="url(#aLite)"/>
+  <text class="lbl" x="430" y="455" fill="#1565C0" font-size="9.5">s00_axi (ctrl/result)</text>
+
+  <!-- DMA reads DDR via HP0 -->
+  <path d="M300,510 L232,510" fill="none" stroke="#555" stroke-width="2" marker-end="url(#aMem)"/>
+  <text class="lbl" x="266" y="502" text-anchor="middle" fill="#555" font-size="9">HP0 ◂ DDR</text>
+
+  <!-- DMA stream -> s_axis -->
+  <path d="M420,540 L455,540 L455,150 L512,150" fill="none" stroke="#E65100" stroke-width="2.4" marker-end="url(#aStream)"/>
+  <text class="lbl" x="468" y="320" fill="#E65100" font-size="9.5" transform="rotate(-90 468 320)">audio AXI-Stream (16-bit)</text>
+
+  <!-- s_axis -> dsp_chain -->
+  <path d="M570,160 L585,160 L585,226" fill="none" stroke="#E65100" stroke-width="2" marker-end="url(#aStream)"/>
+  <!-- dsp_chain -> feature_buffer -->
+  <path d="M640,289 L640,318" fill="none" stroke="#333" stroke-width="1.8" marker-end="url(#aMem)"/>
+  <!-- feature_buffer -> top_nn -->
+  <path d="M720,348 L758,348" fill="none" stroke="#333" stroke-width="1.8" marker-end="url(#aMem)"/>
+  <!-- top_nn -> RESULT -->
+  <path d="M860,376 L860,398" fill="none" stroke="#333" stroke-width="1.8" marker-end="url(#aMem)"/>
+  <!-- RESULT -> s00_axi (read back, dashed) -->
+  <path d="M620,432 L545,432 L545,470" fill="none" stroke="#1565C0" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#aLite)"/>
+  <!-- top_nn / result -> led0 -->
+  <path d="M960,348 L1016,300 L1018,278" fill="none" stroke="#F9A825" stroke-width="2" marker-end="url(#aMem)"/>
+  <text class="lbl" x="980" y="330" fill="#b8860b" font-size="9">led0</text>
+
+  <!-- ============ legend ============ -->
+  <rect x="40" y="565" width="980" height="42" fill="#FAFAFA" stroke="#ddd" rx="6"/>
+  <line x1="60" y1="586" x2="100" y2="586" stroke="#1565C0" stroke-width="3" marker-end="url(#aLite)"/>
+  <text class="s" x="108" y="590">AXI4-Lite — control &amp; result (MMIO)</text>
+  <line x1="370" y1="586" x2="410" y2="586" stroke="#E65100" stroke-width="3" marker-end="url(#aStream)"/>
+  <text class="s" x="418" y="590">AXI4-Stream — audio samples (DMA → core)</text>
+  <line x1="730" y1="586" x2="770" y2="586" stroke="#555" stroke-width="3" marker-end="url(#aMem)"/>
+  <text class="s" x="778" y="590">DDR read / internal dataflow</text>
+  <text class="s" x="980" y="590" text-anchor="end" font-style="italic" fill="#2E7D32">clock: FCLK_CLK0 = 20 MHz</text>
+</svg>
